@@ -1,0 +1,9 @@
+[package]
+name = "stm32f303x_e"
+version = "0.1.0"
+authors = ["Daniel Gallagher <pdanielgallagher@gmail.com>"]
+
+[dependencies]
+cortex-m = "0.4.3"
+vcell = "0.1.0"
+bare-metal = "0.1.1"
