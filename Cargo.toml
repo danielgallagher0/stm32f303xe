@@ -1,9 +1,19 @@
 [package]
-name = "stm32f303x_e"
+name = "stm32f303xe"
 version = "0.1.0"
 authors = ["Daniel Gallagher <pdanielgallagher@gmail.com>"]
 
 [dependencies]
-cortex-m = "0.4.3"
 vcell = "0.1.0"
 bare-metal = "0.1.1"
+
+[dependencies.cortex-m]
+version = "0.4.3"
+features = ["cm7-r0p1"]
+
+[dependencies.cortex-m-rt]
+optional = true
+version = "*"
+
+[features]
+rt = ["cortex-m-rt"]

@@ -1,0 +1,3488 @@
+diff --git a/data/STMicro/STM32F303xE.svd b/data/STMicro/STM32F303xE.svd
+index a22530f..99b635c 100644
+--- a/data/STMicro/STM32F303xE.svd
++++ b/data/STMicro/STM32F303xE.svd
+@@ -41,103 +41,156 @@
+           <addressOffset>0x0</addressOffset>
+           <size>0x20</size>
+           <access>read-write</access>
+-          <resetValue>0x28000000</resetValue>
++          <resetValue>0xa8000000</resetValue>
+           <fields>
+             <field>
+               <name>MODER15</name>
+               <description>Port x configuration bits (y = 0..15)</description>
+               <bitOffset>30</bitOffset>
+               <bitWidth>2</bitWidth>
++              <enumeratedValues>
++                <name>MODE</name>
++                <enumeratedValue>
++                  <name>Input</name>
++                  <description>Input mode (reset state)</description>
++                  <value>0</value>
++                </enumeratedValue>
++                <enumeratedValue>
++                  <name>Output</name>
++                  <description>General purpose output mode</description>
++                  <value>1</value>
++                </enumeratedValue>
++                <enumeratedValue>
++                  <name>Alternate</name>
++                  <description>Alternate function mode</description>
++                  <value>2</value>
++                </enumeratedValue>
++                <enumeratedValue>
++                  <name>Analog</name>
++                  <description>Analog mode</description>
++                  <value>3</value>
++                </enumeratedValue>
++              </enumeratedValues>
+             </field>
+             <field>
+               <name>MODER14</name>
+               <description>Port x configuration bits (y = 0..15)</description>
+               <bitOffset>28</bitOffset>
+               <bitWidth>2</bitWidth>
++              <enumeratedValues derivedFrom="MODE">
++              </enumeratedValues>
+             </field>
+             <field>
+               <name>MODER13</name>
+               <description>Port x configuration bits (y = 0..15)</description>
+               <bitOffset>26</bitOffset>
+               <bitWidth>2</bitWidth>
++              <enumeratedValues derivedFrom="MODE">
++              </enumeratedValues>
+             </field>
+             <field>
+               <name>MODER12</name>
+               <description>Port x configuration bits (y = 0..15)</description>
+               <bitOffset>24</bitOffset>
+               <bitWidth>2</bitWidth>
++              <enumeratedValues derivedFrom="MODE">
++              </enumeratedValues>
+             </field>
+             <field>
+               <name>MODER11</name>
+               <description>Port x configuration bits (y = 0..15)</description>
+               <bitOffset>22</bitOffset>
+               <bitWidth>2</bitWidth>
++              <enumeratedValues derivedFrom="MODE">
++              </enumeratedValues>
+             </field>
+             <field>
+               <name>MODER10</name>
+               <description>Port x configuration bits (y = 0..15)</description>
+               <bitOffset>20</bitOffset>
+               <bitWidth>2</bitWidth>
++              <enumeratedValues derivedFrom="MODE">
++              </enumeratedValues>
+             </field>
+             <field>
+               <name>MODER9</name>
+               <description>Port x configuration bits (y = 0..15)</description>
+               <bitOffset>18</bitOffset>
+               <bitWidth>2</bitWidth>
++              <enumeratedValues derivedFrom="MODE">
++              </enumeratedValues>
+             </field>
+             <field>
+               <name>MODER8</name>
+               <description>Port x configuration bits (y = 0..15)</description>
+               <bitOffset>16</bitOffset>
+               <bitWidth>2</bitWidth>
++              <enumeratedValues derivedFrom="MODE">
++              </enumeratedValues>
+             </field>
+             <field>
+               <name>MODER7</name>
+               <description>Port x configuration bits (y = 0..15)</description>
+               <bitOffset>14</bitOffset>
+               <bitWidth>2</bitWidth>
++              <enumeratedValues derivedFrom="MODE">
++              </enumeratedValues>
+             </field>
+             <field>
+               <name>MODER6</name>
+               <description>Port x configuration bits (y = 0..15)</description>
+               <bitOffset>12</bitOffset>
+               <bitWidth>2</bitWidth>
++              <enumeratedValues derivedFrom="MODE">
++              </enumeratedValues>
+             </field>
+             <field>
+               <name>MODER5</name>
+               <description>Port x configuration bits (y = 0..15)</description>
+               <bitOffset>10</bitOffset>
+               <bitWidth>2</bitWidth>
++              <enumeratedValues derivedFrom="MODE">
++              </enumeratedValues>
+             </field>
+             <field>
+               <name>MODER4</name>
+               <description>Port x configuration bits (y = 0..15)</description>
+               <bitOffset>8</bitOffset>
+               <bitWidth>2</bitWidth>
++              <enumeratedValues derivedFrom="MODE">
++              </enumeratedValues>
+             </field>
+             <field>
+               <name>MODER3</name>
+               <description>Port x configuration bits (y = 0..15)</description>
+               <bitOffset>6</bitOffset>
+               <bitWidth>2</bitWidth>
++              <enumeratedValues derivedFrom="MODE">
++              </enumeratedValues>
+             </field>
+             <field>
+               <name>MODER2</name>
+               <description>Port x configuration bits (y = 0..15)</description>
+               <bitOffset>4</bitOffset>
+               <bitWidth>2</bitWidth>
++              <enumeratedValues derivedFrom="MODE">
++              </enumeratedValues>
+             </field>
+             <field>
+               <name>MODER1</name>
+               <description>Port x configuration bits (y = 0..15)</description>
+               <bitOffset>2</bitOffset>
+               <bitWidth>2</bitWidth>
++              <enumeratedValues derivedFrom="MODE">
++              </enumeratedValues>
+             </field>
+             <field>
+               <name>MODER0</name>
+               <description>Port x configuration bits (y = 0..15)</description>
+               <bitOffset>0</bitOffset>
+               <bitWidth>2</bitWidth>
++              <enumeratedValues derivedFrom="MODE">
++              </enumeratedValues>
+             </field>
+           </fields>
+         </register>
+@@ -262,96 +315,144 @@
+               <description>Port x configuration bits (y = 0..15)</description>
+               <bitOffset>30</bitOffset>
+               <bitWidth>2</bitWidth>
++              <enumeratedValues>
++                <name>OSPEED</name>
++                <enumeratedValue>
++                  <name>Low</name>
++                  <description>Low speed</description>
++                  <value>0</value>
++                </enumeratedValue>
++                <enumeratedValue>
++                  <name>Medium</name>
++                  <description>Medium speed</description>
++                  <value>1</value>
++                </enumeratedValue>
++                <enumeratedValue>
++                  <name>High</name>
++                  <description>High speed</description>
++                  <value>3</value>
++                </enumeratedValue>
++              </enumeratedValues>
+             </field>
+             <field>
+               <name>OSPEEDR14</name>
+               <description>Port x configuration bits (y = 0..15)</description>
+               <bitOffset>28</bitOffset>
+               <bitWidth>2</bitWidth>
++              <enumeratedValues derivedFrom="OSPEED">
++              </enumeratedValues>
+             </field>
+             <field>
+               <name>OSPEEDR13</name>
+               <description>Port x configuration bits (y = 0..15)</description>
+               <bitOffset>26</bitOffset>
+               <bitWidth>2</bitWidth>
++              <enumeratedValues derivedFrom="OSPEED">
++              </enumeratedValues>
+             </field>
+             <field>
+               <name>OSPEEDR12</name>
+               <description>Port x configuration bits (y = 0..15)</description>
+               <bitOffset>24</bitOffset>
+               <bitWidth>2</bitWidth>
++              <enumeratedValues derivedFrom="OSPEED">
++              </enumeratedValues>
+             </field>
+             <field>
+               <name>OSPEEDR11</name>
+               <description>Port x configuration bits (y = 0..15)</description>
+               <bitOffset>22</bitOffset>
+               <bitWidth>2</bitWidth>
++              <enumeratedValues derivedFrom="OSPEED">
++              </enumeratedValues>
+             </field>
+             <field>
+               <name>OSPEEDR10</name>
+               <description>Port x configuration bits (y = 0..15)</description>
+               <bitOffset>20</bitOffset>
+               <bitWidth>2</bitWidth>
++              <enumeratedValues derivedFrom="OSPEED">
++              </enumeratedValues>
+             </field>
+             <field>
+               <name>OSPEEDR9</name>
+               <description>Port x configuration bits (y = 0..15)</description>
+               <bitOffset>18</bitOffset>
+               <bitWidth>2</bitWidth>
++              <enumeratedValues derivedFrom="OSPEED">
++              </enumeratedValues>
+             </field>
+             <field>
+               <name>OSPEEDR8</name>
+               <description>Port x configuration bits (y = 0..15)</description>
+               <bitOffset>16</bitOffset>
+               <bitWidth>2</bitWidth>
++              <enumeratedValues derivedFrom="OSPEED">
++              </enumeratedValues>
+             </field>
+             <field>
+               <name>OSPEEDR7</name>
+               <description>Port x configuration bits (y = 0..15)</description>
+               <bitOffset>14</bitOffset>
+               <bitWidth>2</bitWidth>
++              <enumeratedValues derivedFrom="OSPEED">
++              </enumeratedValues>
+             </field>
+             <field>
+               <name>OSPEEDR6</name>
+               <description>Port x configuration bits (y = 0..15)</description>
+               <bitOffset>12</bitOffset>
+               <bitWidth>2</bitWidth>
++              <enumeratedValues derivedFrom="OSPEED">
++              </enumeratedValues>
+             </field>
+             <field>
+               <name>OSPEEDR5</name>
+               <description>Port x configuration bits (y = 0..15)</description>
+               <bitOffset>10</bitOffset>
+               <bitWidth>2</bitWidth>
++              <enumeratedValues derivedFrom="OSPEED">
++              </enumeratedValues>
+             </field>
+             <field>
+               <name>OSPEEDR4</name>
+               <description>Port x configuration bits (y = 0..15)</description>
+               <bitOffset>8</bitOffset>
+               <bitWidth>2</bitWidth>
++              <enumeratedValues derivedFrom="OSPEED">
++              </enumeratedValues>
+             </field>
+             <field>
+               <name>OSPEEDR3</name>
+               <description>Port x configuration bits (y = 0..15)</description>
+               <bitOffset>6</bitOffset>
+               <bitWidth>2</bitWidth>
++              <enumeratedValues derivedFrom="OSPEED">
++              </enumeratedValues>
+             </field>
+             <field>
+               <name>OSPEEDR2</name>
+               <description>Port x configuration bits (y = 0..15)</description>
+               <bitOffset>4</bitOffset>
+               <bitWidth>2</bitWidth>
++              <enumeratedValues derivedFrom="OSPEED">
++              </enumeratedValues>
+             </field>
+             <field>
+               <name>OSPEEDR1</name>
+               <description>Port x configuration bits (y = 0..15)</description>
+               <bitOffset>2</bitOffset>
+               <bitWidth>2</bitWidth>
++              <enumeratedValues derivedFrom="OSPEED">
++              </enumeratedValues>
+             </field>
+             <field>
+               <name>OSPEEDR0</name>
+               <description>Port x configuration bits (y = 0..15)</description>
+               <bitOffset>0</bitOffset>
+               <bitWidth>2</bitWidth>
++              <enumeratedValues derivedFrom="OSPEED">
++              </enumeratedValues>
+             </field>
+           </fields>
+         </register>
+@@ -369,96 +470,144 @@
+               <description>Port x configuration bits (y = 0..15)</description>
+               <bitOffset>30</bitOffset>
+               <bitWidth>2</bitWidth>
++              <enumeratedValues>
++                <name>PUPD</name>
++                <enumeratedValue>
++                  <name>None</name>
++                  <description>No pull-up, pull-down</description>
++                  <value>0</value>
++                </enumeratedValue>
++                <enumeratedValue>
++                  <name>PullUp</name>
++                  <description>Pull-up</description>
++                  <value>1</value>
++                </enumeratedValue>
++                <enumeratedValue>
++                  <name>PullDown</name>
++                  <description>Pull-up</description>
++                  <value>2</value>
++                </enumeratedValue>
++              </enumeratedValues>
+             </field>
+             <field>
+               <name>PUPDR14</name>
+               <description>Port x configuration bits (y = 0..15)</description>
+               <bitOffset>28</bitOffset>
+               <bitWidth>2</bitWidth>
++              <enumeratedValues derivedFrom="PUPD">
++              </enumeratedValues>
+             </field>
+             <field>
+               <name>PUPDR13</name>
+               <description>Port x configuration bits (y = 0..15)</description>
+               <bitOffset>26</bitOffset>
+               <bitWidth>2</bitWidth>
++              <enumeratedValues derivedFrom="PUPD">
++              </enumeratedValues>
+             </field>
+             <field>
+               <name>PUPDR12</name>
+               <description>Port x configuration bits (y = 0..15)</description>
+               <bitOffset>24</bitOffset>
+               <bitWidth>2</bitWidth>
++              <enumeratedValues derivedFrom="PUPD">
++              </enumeratedValues>
+             </field>
+             <field>
+               <name>PUPDR11</name>
+               <description>Port x configuration bits (y = 0..15)</description>
+               <bitOffset>22</bitOffset>
+               <bitWidth>2</bitWidth>
++              <enumeratedValues derivedFrom="PUPD">
++              </enumeratedValues>
+             </field>
+             <field>
+               <name>PUPDR10</name>
+               <description>Port x configuration bits (y = 0..15)</description>
+               <bitOffset>20</bitOffset>
+               <bitWidth>2</bitWidth>
++              <enumeratedValues derivedFrom="PUPD">
++              </enumeratedValues>
+             </field>
+             <field>
+               <name>PUPDR9</name>
+               <description>Port x configuration bits (y = 0..15)</description>
+               <bitOffset>18</bitOffset>
+               <bitWidth>2</bitWidth>
++              <enumeratedValues derivedFrom="PUPD">
++              </enumeratedValues>
+             </field>
+             <field>
+               <name>PUPDR8</name>
+               <description>Port x configuration bits (y = 0..15)</description>
+               <bitOffset>16</bitOffset>
+               <bitWidth>2</bitWidth>
++              <enumeratedValues derivedFrom="PUPD">
++              </enumeratedValues>
+             </field>
+             <field>
+               <name>PUPDR7</name>
+               <description>Port x configuration bits (y = 0..15)</description>
+               <bitOffset>14</bitOffset>
+               <bitWidth>2</bitWidth>
++              <enumeratedValues derivedFrom="PUPD">
++              </enumeratedValues>
+             </field>
+             <field>
+               <name>PUPDR6</name>
+               <description>Port x configuration bits (y = 0..15)</description>
+               <bitOffset>12</bitOffset>
+               <bitWidth>2</bitWidth>
++              <enumeratedValues derivedFrom="PUPD">
++              </enumeratedValues>
+             </field>
+             <field>
+               <name>PUPDR5</name>
+               <description>Port x configuration bits (y = 0..15)</description>
+               <bitOffset>10</bitOffset>
+               <bitWidth>2</bitWidth>
++              <enumeratedValues derivedFrom="PUPD">
++              </enumeratedValues>
+             </field>
+             <field>
+               <name>PUPDR4</name>
+               <description>Port x configuration bits (y = 0..15)</description>
+               <bitOffset>8</bitOffset>
+               <bitWidth>2</bitWidth>
++              <enumeratedValues derivedFrom="PUPD">
++              </enumeratedValues>
+             </field>
+             <field>
+               <name>PUPDR3</name>
+               <description>Port x configuration bits (y = 0..15)</description>
+               <bitOffset>6</bitOffset>
+               <bitWidth>2</bitWidth>
++              <enumeratedValues derivedFrom="PUPD">
++              </enumeratedValues>
+             </field>
+             <field>
+               <name>PUPDR2</name>
+               <description>Port x configuration bits (y = 0..15)</description>
+               <bitOffset>4</bitOffset>
+               <bitWidth>2</bitWidth>
++              <enumeratedValues derivedFrom="PUPD">
++              </enumeratedValues>
+             </field>
+             <field>
+               <name>PUPDR1</name>
+               <description>Port x configuration bits (y = 0..15)</description>
+               <bitOffset>2</bitOffset>
+               <bitWidth>2</bitWidth>
++              <enumeratedValues derivedFrom="PUPD">
++              </enumeratedValues>
+             </field>
+             <field>
+               <name>PUPDR0</name>
+               <description>Port x configuration bits (y = 0..15)</description>
+               <bitOffset>0</bitOffset>
+               <bitWidth>2</bitWidth>
++              <enumeratedValues derivedFrom="PUPD">
++              </enumeratedValues>
+             </field>
+           </fields>
+         </register>
+@@ -1006,48 +1155,145 @@
+               <description>Alternate function selection for port x bit y (y = 0..7)</description>
+               <bitOffset>28</bitOffset>
+               <bitWidth>4</bitWidth>
++              <enumeratedValues>
++                <name>AFR</name>
++                <enumeratedValue>
++                  <name>AF0</name>
++                  <description>AF0</description>
++                  <value>0</value>
++                </enumeratedValue>
++                <enumeratedValue>
++                  <name>AF1</name>
++                  <description>AF1</description>
++                  <value>1</value>
++                </enumeratedValue>
++                <enumeratedValue>
++                  <name>AF2</name>
++                  <description>AF2</description>
++                  <value>2</value>
++                </enumeratedValue>
++                <enumeratedValue>
++                  <name>AF3</name>
++                  <description>AF3</description>
++                  <value>3</value>
++                </enumeratedValue>
++                <enumeratedValue>
++                  <name>AF4</name>
++                  <description>AF4</description>
++                  <value>4</value>
++                </enumeratedValue>
++                <enumeratedValue>
++                  <name>AF5</name>
++                  <description>AF5</description>
++                  <value>5</value>
++                </enumeratedValue>
++                <enumeratedValue>
++                  <name>AF6</name>
++                  <description>AF6</description>
++                  <value>6</value>
++                </enumeratedValue>
++                <enumeratedValue>
++                  <name>AF7</name>
++                  <description>AF7</description>
++                  <value>7</value>
++                </enumeratedValue>
++                <enumeratedValue>
++                  <name>AF8</name>
++                  <description>AF8</description>
++                  <value>8</value>
++                </enumeratedValue>
++                <enumeratedValue>
++                  <name>AF9</name>
++                  <description>AF9</description>
++                  <value>9</value>
++                </enumeratedValue>
++                <enumeratedValue>
++                  <name>AF10</name>
++                  <description>AF10</description>
++                  <value>10</value>
++                </enumeratedValue>
++                <enumeratedValue>
++                  <name>AF11</name>
++                  <description>AF11</description>
++                  <value>11</value>
++                </enumeratedValue>
++                <enumeratedValue>
++                  <name>AF12</name>
++                  <description>AF12</description>
++                  <value>12</value>
++                </enumeratedValue>
++                <enumeratedValue>
++                  <name>AF13</name>
++                  <description>AF13</description>
++                  <value>13</value>
++                </enumeratedValue>
++                <enumeratedValue>
++                  <name>AF14</name>
++                  <description>AF14</description>
++                  <value>14</value>
++                </enumeratedValue>
++                <enumeratedValue>
++                  <name>AF15</name>
++                  <description>AF15</description>
++                  <value>15</value>
++                </enumeratedValue>
++              </enumeratedValues>
+             </field>
+             <field>
+               <name>AFRL6</name>
+               <description>Alternate function selection for port x bit y (y = 0..7)</description>
+               <bitOffset>24</bitOffset>
+               <bitWidth>4</bitWidth>
++              <enumeratedValues derivedFrom="AFR">
++              </enumeratedValues>
+             </field>
+             <field>
+               <name>AFRL5</name>
+               <description>Alternate function selection for port x bit y (y = 0..7)</description>
+               <bitOffset>20</bitOffset>
+               <bitWidth>4</bitWidth>
++              <enumeratedValues derivedFrom="AFR">
++              </enumeratedValues>
+             </field>
+             <field>
+               <name>AFRL4</name>
+               <description>Alternate function selection for port x bit y (y = 0..7)</description>
+               <bitOffset>16</bitOffset>
+               <bitWidth>4</bitWidth>
++              <enumeratedValues derivedFrom="AFR">
++              </enumeratedValues>
+             </field>
+             <field>
+               <name>AFRL3</name>
+               <description>Alternate function selection for port x bit y (y = 0..7)</description>
+               <bitOffset>12</bitOffset>
+               <bitWidth>4</bitWidth>
++              <enumeratedValues derivedFrom="AFR">
++              </enumeratedValues>
+             </field>
+             <field>
+               <name>AFRL2</name>
+               <description>Alternate function selection for port x bit y (y = 0..7)</description>
+               <bitOffset>8</bitOffset>
+               <bitWidth>4</bitWidth>
++              <enumeratedValues derivedFrom="AFR">
++              </enumeratedValues>
+             </field>
+             <field>
+               <name>AFRL1</name>
+               <description>Alternate function selection for port x bit y (y = 0..7)</description>
+               <bitOffset>4</bitOffset>
+               <bitWidth>4</bitWidth>
++              <enumeratedValues derivedFrom="AFR">
++              </enumeratedValues>
+             </field>
+             <field>
+               <name>AFRL0</name>
+               <description>Alternate function selection for port x bit y (y = 0..7)</description>
+               <bitOffset>0</bitOffset>
+               <bitWidth>4</bitWidth>
++              <enumeratedValues derivedFrom="AFR">
++              </enumeratedValues>
+             </field>
+           </fields>
+         </register>
+@@ -1065,48 +1311,145 @@
+               <description>Alternate function selection for port x bit y (y = 8..15)</description>
+               <bitOffset>28</bitOffset>
+               <bitWidth>4</bitWidth>
++              <enumeratedValues>
++                <name>AFR</name>
++                <enumeratedValue>
++                  <name>AF0</name>
++                  <description>AF0</description>
++                  <value>0</value>
++                </enumeratedValue>
++                <enumeratedValue>
++                  <name>AF1</name>
++                  <description>AF1</description>
++                  <value>1</value>
++                </enumeratedValue>
++                <enumeratedValue>
++                  <name>AF2</name>
++                  <description>AF2</description>
++                  <value>2</value>
++                </enumeratedValue>
++                <enumeratedValue>
++                  <name>AF3</name>
++                  <description>AF3</description>
++                  <value>3</value>
++                </enumeratedValue>
++                <enumeratedValue>
++                  <name>AF4</name>
++                  <description>AF4</description>
++                  <value>4</value>
++                </enumeratedValue>
++                <enumeratedValue>
++                  <name>AF5</name>
++                  <description>AF5</description>
++                  <value>5</value>
++                </enumeratedValue>
++                <enumeratedValue>
++                  <name>AF6</name>
++                  <description>AF6</description>
++                  <value>6</value>
++                </enumeratedValue>
++                <enumeratedValue>
++                  <name>AF7</name>
++                  <description>AF7</description>
++                  <value>7</value>
++                </enumeratedValue>
++                <enumeratedValue>
++                  <name>AF8</name>
++                  <description>AF8</description>
++                  <value>8</value>
++                </enumeratedValue>
++                <enumeratedValue>
++                  <name>AF9</name>
++                  <description>AF9</description>
++                  <value>9</value>
++                </enumeratedValue>
++                <enumeratedValue>
++                  <name>AF10</name>
++                  <description>AF10</description>
++                  <value>10</value>
++                </enumeratedValue>
++                <enumeratedValue>
++                  <name>AF11</name>
++                  <description>AF11</description>
++                  <value>11</value>
++                </enumeratedValue>
++                <enumeratedValue>
++                  <name>AF12</name>
++                  <description>AF12</description>
++                  <value>12</value>
++                </enumeratedValue>
++                <enumeratedValue>
++                  <name>AF13</name>
++                  <description>AF13</description>
++                  <value>13</value>
++                </enumeratedValue>
++                <enumeratedValue>
++                  <name>AF14</name>
++                  <description>AF14</description>
++                  <value>14</value>
++                </enumeratedValue>
++                <enumeratedValue>
++                  <name>AF15</name>
++                  <description>AF15</description>
++                  <value>15</value>
++                </enumeratedValue>
++              </enumeratedValues>
+             </field>
+             <field>
+               <name>AFRH14</name>
+               <description>Alternate function selection for port x bit y (y = 8..15)</description>
+               <bitOffset>24</bitOffset>
+               <bitWidth>4</bitWidth>
++              <enumeratedValues derivedFrom="AFR">
++              </enumeratedValues>
+             </field>
+             <field>
+               <name>AFRH13</name>
+               <description>Alternate function selection for port x bit y (y = 8..15)</description>
+               <bitOffset>20</bitOffset>
+               <bitWidth>4</bitWidth>
++              <enumeratedValues derivedFrom="AFR">
++              </enumeratedValues>
+             </field>
+             <field>
+               <name>AFRH12</name>
+               <description>Alternate function selection for port x bit y (y = 8..15)</description>
+               <bitOffset>16</bitOffset>
+               <bitWidth>4</bitWidth>
++              <enumeratedValues derivedFrom="AFR">
++              </enumeratedValues>
+             </field>
+             <field>
+               <name>AFRH11</name>
+               <description>Alternate function selection for port x bit y (y = 8..15)</description>
+               <bitOffset>12</bitOffset>
+               <bitWidth>4</bitWidth>
++              <enumeratedValues derivedFrom="AFR">
++              </enumeratedValues>
+             </field>
+             <field>
+               <name>AFRH10</name>
+               <description>Alternate function selection for port x bit y (y = 8..15)</description>
+               <bitOffset>8</bitOffset>
+               <bitWidth>4</bitWidth>
++              <enumeratedValues derivedFrom="AFR">
++              </enumeratedValues>
+             </field>
+             <field>
+               <name>AFRH9</name>
+               <description>Alternate function selection for port x bit y (y = 8..15)</description>
+               <bitOffset>4</bitOffset>
+               <bitWidth>4</bitWidth>
++              <enumeratedValues derivedFrom="AFR">
++              </enumeratedValues>
+             </field>
+             <field>
+               <name>AFRH8</name>
+               <description>Alternate function selection for port x bit y (y = 8..15)</description>
+               <bitOffset>0</bitOffset>
+               <bitWidth>4</bitWidth>
++              <enumeratedValues derivedFrom="AFR">
++              </enumeratedValues>
+             </field>
+           </fields>
+         </register>
+@@ -1244,96 +1587,149 @@
+               <description>Port x configuration bits (y = 0..15)</description>
+               <bitOffset>30</bitOffset>
+               <bitWidth>2</bitWidth>
++              <enumeratedValues>
++                <name>MODE</name>
++                <enumeratedValue>
++                  <name>Input</name>
++                  <description>Input mode (reset state)</description>
++                  <value>0</value>
++                </enumeratedValue>
++                <enumeratedValue>
++                  <name>Output</name>
++                  <description>General purpose output mode</description>
++                  <value>1</value>
++                </enumeratedValue>
++                <enumeratedValue>
++                  <name>Alternate</name>
++                  <description>Alternate function mode</description>
++                  <value>2</value>
++                </enumeratedValue>
++                <enumeratedValue>
++                  <name>Analog</name>
++                  <description>Analog mode</description>
++                  <value>3</value>
++                </enumeratedValue>
++              </enumeratedValues>
+             </field>
+             <field>
+               <name>MODER14</name>
+               <description>Port x configuration bits (y = 0..15)</description>
+               <bitOffset>28</bitOffset>
+               <bitWidth>2</bitWidth>
++              <enumeratedValues derivedFrom="MODE">
++              </enumeratedValues>
+             </field>
+             <field>
+               <name>MODER13</name>
+               <description>Port x configuration bits (y = 0..15)</description>
+               <bitOffset>26</bitOffset>
+               <bitWidth>2</bitWidth>
++              <enumeratedValues derivedFrom="MODE">
++              </enumeratedValues>
+             </field>
+             <field>
+               <name>MODER12</name>
+               <description>Port x configuration bits (y = 0..15)</description>
+               <bitOffset>24</bitOffset>
+               <bitWidth>2</bitWidth>
++              <enumeratedValues derivedFrom="MODE">
++              </enumeratedValues>
+             </field>
+             <field>
+               <name>MODER11</name>
+               <description>Port x configuration bits (y = 0..15)</description>
+               <bitOffset>22</bitOffset>
+               <bitWidth>2</bitWidth>
++              <enumeratedValues derivedFrom="MODE">
++              </enumeratedValues>
+             </field>
+             <field>
+               <name>MODER10</name>
+               <description>Port x configuration bits (y = 0..15)</description>
+               <bitOffset>20</bitOffset>
+               <bitWidth>2</bitWidth>
++              <enumeratedValues derivedFrom="MODE">
++              </enumeratedValues>
+             </field>
+             <field>
+               <name>MODER9</name>
+               <description>Port x configuration bits (y = 0..15)</description>
+               <bitOffset>18</bitOffset>
+               <bitWidth>2</bitWidth>
++              <enumeratedValues derivedFrom="MODE">
++              </enumeratedValues>
+             </field>
+             <field>
+               <name>MODER8</name>
+               <description>Port x configuration bits (y = 0..15)</description>
+               <bitOffset>16</bitOffset>
+               <bitWidth>2</bitWidth>
++              <enumeratedValues derivedFrom="MODE">
++              </enumeratedValues>
+             </field>
+             <field>
+               <name>MODER7</name>
+               <description>Port x configuration bits (y = 0..15)</description>
+               <bitOffset>14</bitOffset>
+               <bitWidth>2</bitWidth>
++              <enumeratedValues derivedFrom="MODE">
++              </enumeratedValues>
+             </field>
+             <field>
+               <name>MODER6</name>
+               <description>Port x configuration bits (y = 0..15)</description>
+               <bitOffset>12</bitOffset>
+               <bitWidth>2</bitWidth>
++              <enumeratedValues derivedFrom="MODE">
++              </enumeratedValues>
+             </field>
+             <field>
+               <name>MODER5</name>
+               <description>Port x configuration bits (y = 0..15)</description>
+               <bitOffset>10</bitOffset>
+               <bitWidth>2</bitWidth>
++              <enumeratedValues derivedFrom="MODE">
++              </enumeratedValues>
+             </field>
+             <field>
+               <name>MODER4</name>
+               <description>Port x configuration bits (y = 0..15)</description>
+               <bitOffset>8</bitOffset>
+               <bitWidth>2</bitWidth>
++              <enumeratedValues derivedFrom="MODE">
++              </enumeratedValues>
+             </field>
+             <field>
+               <name>MODER3</name>
+               <description>Port x configuration bits (y = 0..15)</description>
+               <bitOffset>6</bitOffset>
+               <bitWidth>2</bitWidth>
++              <enumeratedValues derivedFrom="MODE">
++              </enumeratedValues>
+             </field>
+             <field>
+               <name>MODER2</name>
+               <description>Port x configuration bits (y = 0..15)</description>
+               <bitOffset>4</bitOffset>
+               <bitWidth>2</bitWidth>
++              <enumeratedValues derivedFrom="MODE">
++              </enumeratedValues>
+             </field>
+             <field>
+               <name>MODER1</name>
+               <description>Port x configuration bits (y = 0..15)</description>
+               <bitOffset>2</bitOffset>
+               <bitWidth>2</bitWidth>
++              <enumeratedValues derivedFrom="MODE">
++              </enumeratedValues>
+             </field>
+             <field>
+               <name>MODER0</name>
+               <description>Port x configuration bits (y = 0..15)</description>
+               <bitOffset>0</bitOffset>
+               <bitWidth>2</bitWidth>
++              <enumeratedValues derivedFrom="MODE">
++              </enumeratedValues>
+             </field>
+           </fields>
+         </register>
+@@ -1458,96 +1854,144 @@
+               <description>Port x configuration bits (y = 0..15)</description>
+               <bitOffset>30</bitOffset>
+               <bitWidth>2</bitWidth>
++              <enumeratedValues>
++                <name>OSPEED</name>
++                <enumeratedValue>
++                  <name>Low</name>
++                  <description>Low speed</description>
++                  <value>0</value>
++                </enumeratedValue>
++                <enumeratedValue>
++                  <name>Medium</name>
++                  <description>Medium speed</description>
++                  <value>1</value>
++                </enumeratedValue>
++                <enumeratedValue>
++                  <name>High</name>
++                  <description>High speed</description>
++                  <value>3</value>
++                </enumeratedValue>
++              </enumeratedValues>
+             </field>
+             <field>
+               <name>OSPEEDR14</name>
+               <description>Port x configuration bits (y = 0..15)</description>
+               <bitOffset>28</bitOffset>
+               <bitWidth>2</bitWidth>
++              <enumeratedValues derivedFrom="OSPEED">
++              </enumeratedValues>
+             </field>
+             <field>
+               <name>OSPEEDR13</name>
+               <description>Port x configuration bits (y = 0..15)</description>
+               <bitOffset>26</bitOffset>
+               <bitWidth>2</bitWidth>
++              <enumeratedValues derivedFrom="OSPEED">
++              </enumeratedValues>
+             </field>
+             <field>
+               <name>OSPEEDR12</name>
+               <description>Port x configuration bits (y = 0..15)</description>
+               <bitOffset>24</bitOffset>
+               <bitWidth>2</bitWidth>
++              <enumeratedValues derivedFrom="OSPEED">
++              </enumeratedValues>
+             </field>
+             <field>
+               <name>OSPEEDR11</name>
+               <description>Port x configuration bits (y = 0..15)</description>
+               <bitOffset>22</bitOffset>
+               <bitWidth>2</bitWidth>
++              <enumeratedValues derivedFrom="OSPEED">
++              </enumeratedValues>
+             </field>
+             <field>
+               <name>OSPEEDR10</name>
+               <description>Port x configuration bits (y = 0..15)</description>
+               <bitOffset>20</bitOffset>
+               <bitWidth>2</bitWidth>
++              <enumeratedValues derivedFrom="OSPEED">
++              </enumeratedValues>
+             </field>
+             <field>
+               <name>OSPEEDR9</name>
+               <description>Port x configuration bits (y = 0..15)</description>
+               <bitOffset>18</bitOffset>
+               <bitWidth>2</bitWidth>
++              <enumeratedValues derivedFrom="OSPEED">
++              </enumeratedValues>
+             </field>
+             <field>
+               <name>OSPEEDR8</name>
+               <description>Port x configuration bits (y = 0..15)</description>
+               <bitOffset>16</bitOffset>
+               <bitWidth>2</bitWidth>
++              <enumeratedValues derivedFrom="OSPEED">
++              </enumeratedValues>
+             </field>
+             <field>
+               <name>OSPEEDR7</name>
+               <description>Port x configuration bits (y = 0..15)</description>
+               <bitOffset>14</bitOffset>
+               <bitWidth>2</bitWidth>
++              <enumeratedValues derivedFrom="OSPEED">
++              </enumeratedValues>
+             </field>
+             <field>
+               <name>OSPEEDR6</name>
+               <description>Port x configuration bits (y = 0..15)</description>
+               <bitOffset>12</bitOffset>
+               <bitWidth>2</bitWidth>
++              <enumeratedValues derivedFrom="OSPEED">
++              </enumeratedValues>
+             </field>
+             <field>
+               <name>OSPEEDR5</name>
+               <description>Port x configuration bits (y = 0..15)</description>
+               <bitOffset>10</bitOffset>
+               <bitWidth>2</bitWidth>
++              <enumeratedValues derivedFrom="OSPEED">
++              </enumeratedValues>
+             </field>
+             <field>
+               <name>OSPEEDR4</name>
+               <description>Port x configuration bits (y = 0..15)</description>
+               <bitOffset>8</bitOffset>
+               <bitWidth>2</bitWidth>
++              <enumeratedValues derivedFrom="OSPEED">
++              </enumeratedValues>
+             </field>
+             <field>
+               <name>OSPEEDR3</name>
+               <description>Port x configuration bits (y = 0..15)</description>
+               <bitOffset>6</bitOffset>
+               <bitWidth>2</bitWidth>
++              <enumeratedValues derivedFrom="OSPEED">
++              </enumeratedValues>
+             </field>
+             <field>
+               <name>OSPEEDR2</name>
+               <description>Port x configuration bits (y = 0..15)</description>
+               <bitOffset>4</bitOffset>
+               <bitWidth>2</bitWidth>
++              <enumeratedValues derivedFrom="OSPEED">
++              </enumeratedValues>
+             </field>
+             <field>
+               <name>OSPEEDR1</name>
+               <description>Port x configuration bits (y = 0..15)</description>
+               <bitOffset>2</bitOffset>
+               <bitWidth>2</bitWidth>
++              <enumeratedValues derivedFrom="OSPEED">
++              </enumeratedValues>
+             </field>
+             <field>
+               <name>OSPEEDR0</name>
+               <description>Port x configuration bits (y = 0..15)</description>
+               <bitOffset>0</bitOffset>
+               <bitWidth>2</bitWidth>
++              <enumeratedValues derivedFrom="OSPEED">
++              </enumeratedValues>
+             </field>
+           </fields>
+         </register>
+@@ -1565,96 +2009,144 @@
+               <description>Port x configuration bits (y = 0..15)</description>
+               <bitOffset>30</bitOffset>
+               <bitWidth>2</bitWidth>
++              <enumeratedValues>
++                <name>PUPD</name>
++                <enumeratedValue>
++                  <name>None</name>
++                  <description>No pull-up, pull-down</description>
++                  <value>0</value>
++                </enumeratedValue>
++                <enumeratedValue>
++                  <name>PullUp</name>
++                  <description>Pull-up</description>
++                  <value>1</value>
++                </enumeratedValue>
++                <enumeratedValue>
++                  <name>PullDown</name>
++                  <description>Pull-up</description>
++                  <value>2</value>
++                </enumeratedValue>
++              </enumeratedValues>
+             </field>
+             <field>
+               <name>PUPDR14</name>
+               <description>Port x configuration bits (y = 0..15)</description>
+               <bitOffset>28</bitOffset>
+               <bitWidth>2</bitWidth>
++              <enumeratedValues derivedFrom="PUPD">
++              </enumeratedValues>
+             </field>
+             <field>
+               <name>PUPDR13</name>
+               <description>Port x configuration bits (y = 0..15)</description>
+               <bitOffset>26</bitOffset>
+               <bitWidth>2</bitWidth>
++              <enumeratedValues derivedFrom="PUPD">
++              </enumeratedValues>
+             </field>
+             <field>
+               <name>PUPDR12</name>
+               <description>Port x configuration bits (y = 0..15)</description>
+               <bitOffset>24</bitOffset>
+               <bitWidth>2</bitWidth>
++              <enumeratedValues derivedFrom="PUPD">
++              </enumeratedValues>
+             </field>
+             <field>
+               <name>PUPDR11</name>
+               <description>Port x configuration bits (y = 0..15)</description>
+               <bitOffset>22</bitOffset>
+               <bitWidth>2</bitWidth>
++              <enumeratedValues derivedFrom="PUPD">
++              </enumeratedValues>
+             </field>
+             <field>
+               <name>PUPDR10</name>
+               <description>Port x configuration bits (y = 0..15)</description>
+               <bitOffset>20</bitOffset>
+               <bitWidth>2</bitWidth>
++              <enumeratedValues derivedFrom="PUPD">
++              </enumeratedValues>
+             </field>
+             <field>
+               <name>PUPDR9</name>
+               <description>Port x configuration bits (y = 0..15)</description>
+               <bitOffset>18</bitOffset>
+               <bitWidth>2</bitWidth>
++              <enumeratedValues derivedFrom="PUPD">
++              </enumeratedValues>
+             </field>
+             <field>
+               <name>PUPDR8</name>
+               <description>Port x configuration bits (y = 0..15)</description>
+               <bitOffset>16</bitOffset>
+               <bitWidth>2</bitWidth>
++              <enumeratedValues derivedFrom="PUPD">
++              </enumeratedValues>
+             </field>
+             <field>
+               <name>PUPDR7</name>
+               <description>Port x configuration bits (y = 0..15)</description>
+               <bitOffset>14</bitOffset>
+               <bitWidth>2</bitWidth>
++              <enumeratedValues derivedFrom="PUPD">
++              </enumeratedValues>
+             </field>
+             <field>
+               <name>PUPDR6</name>
+               <description>Port x configuration bits (y = 0..15)</description>
+               <bitOffset>12</bitOffset>
+               <bitWidth>2</bitWidth>
++              <enumeratedValues derivedFrom="PUPD">
++              </enumeratedValues>
+             </field>
+             <field>
+               <name>PUPDR5</name>
+               <description>Port x configuration bits (y = 0..15)</description>
+               <bitOffset>10</bitOffset>
+               <bitWidth>2</bitWidth>
++              <enumeratedValues derivedFrom="PUPD">
++              </enumeratedValues>
+             </field>
+             <field>
+               <name>PUPDR4</name>
+               <description>Port x configuration bits (y = 0..15)</description>
+               <bitOffset>8</bitOffset>
+               <bitWidth>2</bitWidth>
++              <enumeratedValues derivedFrom="PUPD">
++              </enumeratedValues>
+             </field>
+             <field>
+               <name>PUPDR3</name>
+               <description>Port x configuration bits (y = 0..15)</description>
+               <bitOffset>6</bitOffset>
+               <bitWidth>2</bitWidth>
++              <enumeratedValues derivedFrom="PUPD">
++              </enumeratedValues>
+             </field>
+             <field>
+               <name>PUPDR2</name>
+               <description>Port x configuration bits (y = 0..15)</description>
+               <bitOffset>4</bitOffset>
+               <bitWidth>2</bitWidth>
++              <enumeratedValues derivedFrom="PUPD">
++              </enumeratedValues>
+             </field>
+             <field>
+               <name>PUPDR1</name>
+               <description>Port x configuration bits (y = 0..15)</description>
+               <bitOffset>2</bitOffset>
+               <bitWidth>2</bitWidth>
++              <enumeratedValues derivedFrom="PUPD">
++              </enumeratedValues>
+             </field>
+             <field>
+               <name>PUPDR0</name>
+               <description>Port x configuration bits (y = 0..15)</description>
+               <bitOffset>0</bitOffset>
+               <bitWidth>2</bitWidth>
++              <enumeratedValues derivedFrom="PUPD">
++              </enumeratedValues>
+             </field>
+           </fields>
+         </register>
+@@ -2202,48 +2694,145 @@
+               <description>Alternate function selection for port x bit y (y = 0..7)</description>
+               <bitOffset>28</bitOffset>
+               <bitWidth>4</bitWidth>
++              <enumeratedValues>
++                <name>AFR</name>
++                <enumeratedValue>
++                  <name>AF0</name>
++                  <description>AF0</description>
++                  <value>0</value>
++                </enumeratedValue>
++                <enumeratedValue>
++                  <name>AF1</name>
++                  <description>AF1</description>
++                  <value>1</value>
++                </enumeratedValue>
++                <enumeratedValue>
++                  <name>AF2</name>
++                  <description>AF2</description>
++                  <value>2</value>
++                </enumeratedValue>
++                <enumeratedValue>
++                  <name>AF3</name>
++                  <description>AF3</description>
++                  <value>3</value>
++                </enumeratedValue>
++                <enumeratedValue>
++                  <name>AF4</name>
++                  <description>AF4</description>
++                  <value>4</value>
++                </enumeratedValue>
++                <enumeratedValue>
++                  <name>AF5</name>
++                  <description>AF5</description>
++                  <value>5</value>
++                </enumeratedValue>
++                <enumeratedValue>
++                  <name>AF6</name>
++                  <description>AF6</description>
++                  <value>6</value>
++                </enumeratedValue>
++                <enumeratedValue>
++                  <name>AF7</name>
++                  <description>AF7</description>
++                  <value>7</value>
++                </enumeratedValue>
++                <enumeratedValue>
++                  <name>AF8</name>
++                  <description>AF8</description>
++                  <value>8</value>
++                </enumeratedValue>
++                <enumeratedValue>
++                  <name>AF9</name>
++                  <description>AF9</description>
++                  <value>9</value>
++                </enumeratedValue>
++                <enumeratedValue>
++                  <name>AF10</name>
++                  <description>AF10</description>
++                  <value>10</value>
++                </enumeratedValue>
++                <enumeratedValue>
++                  <name>AF11</name>
++                  <description>AF11</description>
++                  <value>11</value>
++                </enumeratedValue>
++                <enumeratedValue>
++                  <name>AF12</name>
++                  <description>AF12</description>
++                  <value>12</value>
++                </enumeratedValue>
++                <enumeratedValue>
++                  <name>AF13</name>
++                  <description>AF13</description>
++                  <value>13</value>
++                </enumeratedValue>
++                <enumeratedValue>
++                  <name>AF14</name>
++                  <description>AF14</description>
++                  <value>14</value>
++                </enumeratedValue>
++                <enumeratedValue>
++                  <name>AF15</name>
++                  <description>AF15</description>
++                  <value>15</value>
++                </enumeratedValue>
++              </enumeratedValues>
+             </field>
+             <field>
+               <name>AFRL6</name>
+               <description>Alternate function selection for port x bit y (y = 0..7)</description>
+               <bitOffset>24</bitOffset>
+               <bitWidth>4</bitWidth>
++              <enumeratedValues derivedFrom="AFR">
++              </enumeratedValues>
+             </field>
+             <field>
+               <name>AFRL5</name>
+               <description>Alternate function selection for port x bit y (y = 0..7)</description>
+               <bitOffset>20</bitOffset>
+               <bitWidth>4</bitWidth>
++              <enumeratedValues derivedFrom="AFR">
++              </enumeratedValues>
+             </field>
+             <field>
+               <name>AFRL4</name>
+               <description>Alternate function selection for port x bit y (y = 0..7)</description>
+               <bitOffset>16</bitOffset>
+               <bitWidth>4</bitWidth>
++              <enumeratedValues derivedFrom="AFR">
++              </enumeratedValues>
+             </field>
+             <field>
+               <name>AFRL3</name>
+               <description>Alternate function selection for port x bit y (y = 0..7)</description>
+               <bitOffset>12</bitOffset>
+               <bitWidth>4</bitWidth>
++              <enumeratedValues derivedFrom="AFR">
++              </enumeratedValues>
+             </field>
+             <field>
+               <name>AFRL2</name>
+               <description>Alternate function selection for port x bit y (y = 0..7)</description>
+               <bitOffset>8</bitOffset>
+               <bitWidth>4</bitWidth>
++              <enumeratedValues derivedFrom="AFR">
++              </enumeratedValues>
+             </field>
+             <field>
+               <name>AFRL1</name>
+               <description>Alternate function selection for port x bit y (y = 0..7)</description>
+               <bitOffset>4</bitOffset>
+               <bitWidth>4</bitWidth>
++              <enumeratedValues derivedFrom="AFR">
++              </enumeratedValues>
+             </field>
+             <field>
+               <name>AFRL0</name>
+               <description>Alternate function selection for port x bit y (y = 0..7)</description>
+               <bitOffset>0</bitOffset>
+               <bitWidth>4</bitWidth>
++              <enumeratedValues derivedFrom="AFR">
++              </enumeratedValues>
+             </field>
+           </fields>
+         </register>
+@@ -2261,48 +2850,145 @@
+               <description>Alternate function selection for port x bit y (y = 8..15)</description>
+               <bitOffset>28</bitOffset>
+               <bitWidth>4</bitWidth>
++              <enumeratedValues>
++                <name>AFR</name>
++                <enumeratedValue>
++                  <name>AF0</name>
++                  <description>AF0</description>
++                  <value>0</value>
++                </enumeratedValue>
++                <enumeratedValue>
++                  <name>AF1</name>
++                  <description>AF1</description>
++                  <value>1</value>
++                </enumeratedValue>
++                <enumeratedValue>
++                  <name>AF2</name>
++                  <description>AF2</description>
++                  <value>2</value>
++                </enumeratedValue>
++                <enumeratedValue>
++                  <name>AF3</name>
++                  <description>AF3</description>
++                  <value>3</value>
++                </enumeratedValue>
++                <enumeratedValue>
++                  <name>AF4</name>
++                  <description>AF4</description>
++                  <value>4</value>
++                </enumeratedValue>
++                <enumeratedValue>
++                  <name>AF5</name>
++                  <description>AF5</description>
++                  <value>5</value>
++                </enumeratedValue>
++                <enumeratedValue>
++                  <name>AF6</name>
++                  <description>AF6</description>
++                  <value>6</value>
++                </enumeratedValue>
++                <enumeratedValue>
++                  <name>AF7</name>
++                  <description>AF7</description>
++                  <value>7</value>
++                </enumeratedValue>
++                <enumeratedValue>
++                  <name>AF8</name>
++                  <description>AF8</description>
++                  <value>8</value>
++                </enumeratedValue>
++                <enumeratedValue>
++                  <name>AF9</name>
++                  <description>AF9</description>
++                  <value>9</value>
++                </enumeratedValue>
++                <enumeratedValue>
++                  <name>AF10</name>
++                  <description>AF10</description>
++                  <value>10</value>
++                </enumeratedValue>
++                <enumeratedValue>
++                  <name>AF11</name>
++                  <description>AF11</description>
++                  <value>11</value>
++                </enumeratedValue>
++                <enumeratedValue>
++                  <name>AF12</name>
++                  <description>AF12</description>
++                  <value>12</value>
++                </enumeratedValue>
++                <enumeratedValue>
++                  <name>AF13</name>
++                  <description>AF13</description>
++                  <value>13</value>
++                </enumeratedValue>
++                <enumeratedValue>
++                  <name>AF14</name>
++                  <description>AF14</description>
++                  <value>14</value>
++                </enumeratedValue>
++                <enumeratedValue>
++                  <name>AF15</name>
++                  <description>AF15</description>
++                  <value>15</value>
++                </enumeratedValue>
++              </enumeratedValues>
+             </field>
+             <field>
+               <name>AFRH14</name>
+               <description>Alternate function selection for port x bit y (y = 8..15)</description>
+               <bitOffset>24</bitOffset>
+               <bitWidth>4</bitWidth>
++              <enumeratedValues derivedFrom="AFR">
++              </enumeratedValues>
+             </field>
+             <field>
+               <name>AFRH13</name>
+               <description>Alternate function selection for port x bit y (y = 8..15)</description>
+               <bitOffset>20</bitOffset>
+               <bitWidth>4</bitWidth>
++              <enumeratedValues derivedFrom="AFR">
++              </enumeratedValues>
+             </field>
+             <field>
+               <name>AFRH12</name>
+               <description>Alternate function selection for port x bit y (y = 8..15)</description>
+               <bitOffset>16</bitOffset>
+               <bitWidth>4</bitWidth>
++              <enumeratedValues derivedFrom="AFR">
++              </enumeratedValues>
+             </field>
+             <field>
+               <name>AFRH11</name>
+               <description>Alternate function selection for port x bit y (y = 8..15)</description>
+               <bitOffset>12</bitOffset>
+               <bitWidth>4</bitWidth>
++              <enumeratedValues derivedFrom="AFR">
++              </enumeratedValues>
+             </field>
+             <field>
+               <name>AFRH10</name>
+               <description>Alternate function selection for port x bit y (y = 8..15)</description>
+               <bitOffset>8</bitOffset>
+               <bitWidth>4</bitWidth>
++              <enumeratedValues derivedFrom="AFR">
++              </enumeratedValues>
+             </field>
+             <field>
+               <name>AFRH9</name>
+               <description>Alternate function selection for port x bit y (y = 8..15)</description>
+               <bitOffset>4</bitOffset>
+               <bitWidth>4</bitWidth>
++              <enumeratedValues derivedFrom="AFR">
++              </enumeratedValues>
+             </field>
+             <field>
+               <name>AFRH8</name>
+               <description>Alternate function selection for port x bit y (y = 8..15)</description>
+               <bitOffset>0</bitOffset>
+               <bitWidth>4</bitWidth>
++              <enumeratedValues derivedFrom="AFR">
++              </enumeratedValues>
+             </field>
+           </fields>
+         </register>
+@@ -3744,12 +4430,58 @@
+               <description>Polynomial size</description>
+               <bitOffset>3</bitOffset>
+               <bitWidth>2</bitWidth>
++              <enumeratedValues>
++                <name>PSIZE</name>
++                <enumeratedValue>
++                  <name>Poly32</name>
++                  <description>32-bit polynomial</description>
++                  <value>0</value>
++                </enumeratedValue>
++                <enumeratedValue>
++                  <name>Poly16</name>
++                  <description>16-bit polynomial</description>
++                  <value>1</value>
++                </enumeratedValue>
++                <enumeratedValue>
++                  <name>Poly8</name>
++                  <description>8-bit polynomial</description>
++                  <value>2</value>
++                </enumeratedValue>
++                <enumeratedValue>
++                  <name>Poly7</name>
++                  <description>7-bit polynomial</description>
++                  <value>3</value>
++                </enumeratedValue>
++              </enumeratedValues>
+             </field>
+             <field>
+               <name>REV_IN</name>
+               <description>Reverse input data</description>
+               <bitOffset>5</bitOffset>
+               <bitWidth>2</bitWidth>
++              <enumeratedValues>
++                <name>REV_IN</name>
++                <enumeratedValue>
++                  <name>None</name>
++                  <description>Bit order not affected</description>
++                  <value>0</value>
++                </enumeratedValue>
++                <enumeratedValue>
++                  <name>Byte</name>
++                  <description>Bit reversal done by byte</description>
++                  <value>1</value>
++                </enumeratedValue>
++                <enumeratedValue>
++                  <name>HalfWord</name>
++                  <description>Bit reversal done by half-word</description>
++                  <value>2</value>
++                </enumeratedValue>
++                <enumeratedValue>
++                  <name>Word</name>
++                  <description>Bit reversal done by word</description>
++                  <value>3</value>
++                </enumeratedValue>
++              </enumeratedValues>
+             </field>
+             <field>
+               <name>REV_OUT</name>
+@@ -3824,6 +4556,24 @@
+               <description>LATENCY</description>
+               <bitOffset>0</bitOffset>
+               <bitWidth>3</bitWidth>
++              <enumeratedValues>
++                <name>WAIT_STATE</name>
++                <enumeratedValue>
++                  <name>Zero</name>
++                  <description>Zero wait states, if 0 &lt; HCLK ≤ 24 MHz</description>
++                  <value>0</value>
++                </enumeratedValue>
++                <enumeratedValue>
++                  <name>One</name>
++                  <description>One wait state, if 24 &lt; HCLK ≤ 48 MHz</description>
++                  <value>1</value>
++                </enumeratedValue>
++                <enumeratedValue>
++                  <name>Two</name>
++                  <description>Two wait states, if 48 &lt; HCLK ≤ 72 MHz</description>
++                  <value>2</value>
++                </enumeratedValue>
++              </enumeratedValues>
+               <access>read-write</access>
+             </field>
+             <field>
+@@ -4213,6 +4963,24 @@
+               <description>System clock Switch</description>
+               <bitOffset>0</bitOffset>
+               <bitWidth>2</bitWidth>
++              <enumeratedValues>
++                <name>CLK_SW</name>
++                <enumeratedValue>
++                  <name>HSI</name>
++                  <description>HSI selected as system clock</description>
++                  <value>0</value>
++                </enumeratedValue>
++                <enumeratedValue>
++                  <name>HSE</name>
++                  <description>HSE selected as system clock</description>
++                  <value>1</value>
++                </enumeratedValue>
++                <enumeratedValue>
++                  <name>PLL</name>
++                  <description>PLL selected as system clock</description>
++                  <value>2</value>
++                </enumeratedValue>
++              </enumeratedValues>
+               <access>read-write</access>
+             </field>
+             <field>
+@@ -4220,6 +4988,8 @@
+               <description>System Clock Switch Status</description>
+               <bitOffset>2</bitOffset>
+               <bitWidth>2</bitWidth>
++              <enumeratedValues derivedFrom="CLK_SW">
++              </enumeratedValues>
+               <access>read-only</access>
+             </field>
+             <field>
+@@ -4248,6 +5018,24 @@
+               <description>PLL entry clock source</description>
+               <bitOffset>15</bitOffset>
+               <bitWidth>2</bitWidth>
++              <enumeratedValues>
++                <name>PLL_SRC</name>
++                <enumeratedValue>
++                  <name>HSI_2</name>
++                  <description>HSI/2 used as PREDIV1 entry and PREDIV1 forced to div by 2.</description>
++                  <value>0</value>
++                </enumeratedValue>
++                <enumeratedValue>
++                  <name>HSI</name>
++                  <description>HSI used as PREDIV1 entry.</description>
++                  <value>1</value>
++                </enumeratedValue>
++                <enumeratedValue>
++                  <name>HSE</name>
++                  <description>HSE used as PREDIV1 entry.</description>
++                  <value>2</value>
++                </enumeratedValue>
++              </enumeratedValues>
+               <access>read-write</access>
+             </field>
+             <field>
+@@ -4276,6 +5064,44 @@
+               <description>Microcontroller clock output</description>
+               <bitOffset>24</bitOffset>
+               <bitWidth>3</bitWidth>
++              <enumeratedValues>
++                <name>MCO_VALUES</name>
++                <enumeratedValue>
++                  <name>Disabled</name>
++                  <description>MCO output disabled, no clock on MCO</description>
++                  <value>0</value>
++                </enumeratedValue>
++                <enumeratedValue>
++                  <name>LSI</name>
++                  <description>LSI clock selected</description>
++                  <value>2</value>
++                </enumeratedValue>
++                <enumeratedValue>
++                  <name>LSE</name>
++                  <description>LSE clock selected</description>
++                  <value>3</value>
++                </enumeratedValue>
++                <enumeratedValue>
++                  <name>SYSCLK</name>
++                  <description>System clock (SYSCLK) selected</description>
++                  <value>4</value>
++                </enumeratedValue>
++                <enumeratedValue>
++                  <name>HSI</name>
++                  <description>HSI clock selected</description>
++                  <value>5</value>
++                </enumeratedValue>
++                <enumeratedValue>
++                  <name>HSE</name>
++                  <description>HSE clock selected</description>
++                  <value>6</value>
++                </enumeratedValue>
++                <enumeratedValue>
++                  <name>PLL</name>
++                  <description>PLL clock selected (divided by 1 or 2 depending on PLLNODIV bit)</description>
++                  <value>7</value>
++                </enumeratedValue>
++              </enumeratedValues>
+               <access>read-write</access>
+             </field>
+             <field>
+@@ -4890,6 +5716,29 @@
+               <description>LSE oscillator drive capability</description>
+               <bitOffset>3</bitOffset>
+               <bitWidth>2</bitWidth>
++              <enumeratedValues>
++                <name>XTAL</name>
++                <enumeratedValue>
++                  <name>Lower</name>
++                  <description>‘Xtal mode’ lower driving capability</description>
++                  <value>0</value>
++                </enumeratedValue>
++                <enumeratedValue>
++                  <name>MediumHigh</name>
++                  <description>‘Xtal mode’ medium high driving capability</description>
++                  <value>1</value>
++                </enumeratedValue>
++                <enumeratedValue>
++                  <name>MediumLow</name>
++                  <description>‘Xtal mode’ medium low driving capability</description>
++                  <value>2</value>
++                </enumeratedValue>
++                <enumeratedValue>
++                  <name>Higher</name>
++                  <description>‘Xtal mode’ higher driving capability (reset value)</description>
++                  <value>3</value>
++                </enumeratedValue>
++              </enumeratedValues>
+               <access>read-write</access>
+             </field>
+             <field>
+@@ -4897,6 +5746,29 @@
+               <description>RTC clock source selection</description>
+               <bitOffset>8</bitOffset>
+               <bitWidth>2</bitWidth>
++              <enumeratedValues>
++                <name>RTCSEL_VALUES</name>
++                <enumeratedValue>
++                  <name>None</name>
++                  <description>No clock</description>
++                  <value>0</value>
++                </enumeratedValue>
++                <enumeratedValue>
++                  <name>LSE</name>
++                  <description>LSE oscillator clock used as RTC clock</description>
++                  <value>1</value>
++                </enumeratedValue>
++                <enumeratedValue>
++                  <name>LSI</name>
++                  <description>LSI oscillator clock used as RTC clock</description>
++                  <value>2</value>
++                </enumeratedValue>
++                <enumeratedValue>
++                  <name>HSE</name>
++                  <description>HSE oscillator clock divided by 32 used as RTC clock</description>
++                  <value>3</value>
++                </enumeratedValue>
++              </enumeratedValues>
+               <access>read-write</access>
+             </field>
+             <field>
+@@ -5103,6 +5975,29 @@
+               <description>USART1 clock source selection</description>
+               <bitOffset>0</bitOffset>
+               <bitWidth>2</bitWidth>
++              <enumeratedValues>
++                <name>USART_CLK</name>
++                <enumeratedValue>
++                  <name>PCLK</name>
++                  <description>PCLK selected as USART1 clock source (default)</description>
++                  <value>0</value>
++                </enumeratedValue>
++                <enumeratedValue>
++                  <name>SYSCLK</name>
++                  <description>System clock (SYSCLK) selected as USART1 clock</description>
++                  <value>1</value>
++                </enumeratedValue>
++                <enumeratedValue>
++                  <name>LSE</name>
++                  <description>LSE clock selected as USART1 clock</description>
++                  <value>2</value>
++                </enumeratedValue>
++                <enumeratedValue>
++                  <name>HSI</name>
++                  <description>HSI clock selected as USART1 clock</description>
++                  <value>3</value>
++                </enumeratedValue>
++              </enumeratedValues>
+             </field>
+             <field>
+               <name>I2C1SW</name>
+@@ -5121,12 +6016,16 @@
+               <description>USART2 clock source selection</description>
+               <bitOffset>16</bitOffset>
+               <bitWidth>2</bitWidth>
++              <enumeratedValues derivedFrom="USART_CLK">
++              </enumeratedValues>
+             </field>
+             <field>
+               <name>USART3SW</name>
+               <description>USART3 clock source selection</description>
+               <bitOffset>18</bitOffset>
+               <bitWidth>2</bitWidth>
++              <enumeratedValues derivedFrom="USART_CLK">
++              </enumeratedValues>
+             </field>
+             <field>
+               <name>TIM1SW</name>
+@@ -5145,12 +6044,16 @@
+               <description>UART4 clock source selection</description>
+               <bitOffset>20</bitOffset>
+               <bitWidth>2</bitWidth>
++              <enumeratedValues derivedFrom="USART_CLK">
++              </enumeratedValues>
+             </field>
+             <field>
+               <name>UART5SW</name>
+               <description>UART5 clock source selection</description>
+               <bitOffset>22</bitOffset>
+               <bitWidth>2</bitWidth>
++              <enumeratedValues derivedFrom="USART_CLK">
++              </enumeratedValues>
+             </field>
+           </fields>
+         </register>
+@@ -5622,18 +6525,53 @@
+               <description>Peripheral size</description>
+               <bitOffset>8</bitOffset>
+               <bitWidth>2</bitWidth>
++              <enumeratedValues>
++                <name>PSIZE_VALUE</name>
++                <enumeratedValue>
++                  <name>SZ8</name>
++                  <description>8 bits</description>
++                  <value>0</value>
++                  <name>SZ16</name>
++                  <description>16 bits</description>
++                  <value>1</value>
++                  <name>SZ32</name>
++                  <description>32 bits</description>
++                  <value>2</value>
++                </enumeratedValue>
++              </enumeratedValues>
+             </field>
+             <field>
+               <name>MSIZE</name>
+               <description>Memory size</description>
+               <bitOffset>10</bitOffset>
+               <bitWidth>2</bitWidth>
++              <enumeratedValues derivedFrome="PSIZE_VALUE">
++              </enumeratedValues>
+             </field>
+             <field>
+               <name>PL</name>
+               <description>Channel Priority level</description>
+               <bitOffset>12</bitOffset>
+               <bitWidth>2</bitWidth>
++              <enumeratedValues>
++                <name>PRI_LVL</name>
++                <enumeratedValue>
++                  <name>Low</name>
++                  <value>0</value>
++                </enumeratedValue>
++                <enumeratedValue>
++                  <name>Medium</name>
++                  <value>1</value>
++                </enumeratedValue>
++                <enumeratedValue>
++                  <name>High</name>
++                  <value>2</value>
++                </enumeratedValue>
++                <enumeratedValue>
++                  <name>VeryHigh</name>
++                  <value>3</value>
++                </enumeratedValue>
++              </enumeratedValues>
+             </field>
+             <field>
+               <name>MEM2MEM</name>
+@@ -5756,18 +6694,53 @@
+               <description>Peripheral size</description>
+               <bitOffset>8</bitOffset>
+               <bitWidth>2</bitWidth>
++              <enumeratedValues>
++                <name>PSIZE_VALUE</name>
++                <enumeratedValue>
++                  <name>SZ8</name>
++                  <description>8 bits</description>
++                  <value>0</value>
++                  <name>SZ16</name>
++                  <description>16 bits</description>
++                  <value>1</value>
++                  <name>SZ32</name>
++                  <description>32 bits</description>
++                  <value>2</value>
++                </enumeratedValue>
++              </enumeratedValues>
+             </field>
+             <field>
+               <name>MSIZE</name>
+               <description>Memory size</description>
+               <bitOffset>10</bitOffset>
+               <bitWidth>2</bitWidth>
++              <enumeratedValues derivedFrom="PSIZE_VALUE">
++              </enumeratedValues>
+             </field>
+             <field>
+               <name>PL</name>
+               <description>Channel Priority level</description>
+               <bitOffset>12</bitOffset>
+               <bitWidth>2</bitWidth>
++              <enumeratedValues>
++                <name>PRI_LVL</name>
++                <enumeratedValue>
++                  <name>Low</name>
++                  <value>0</value>
++                </enumeratedValue>
++                <enumeratedValue>
++                  <name>Medium</name>
++                  <value>1</value>
++                </enumeratedValue>
++                <enumeratedValue>
++                  <name>High</name>
++                  <value>2</value>
++                </enumeratedValue>
++                <enumeratedValue>
++                  <name>VeryHigh</name>
++                  <value>3</value>
++                </enumeratedValue>
++              </enumeratedValues>
+             </field>
+             <field>
+               <name>MEM2MEM</name>
+@@ -5890,18 +6863,53 @@
+               <description>Peripheral size</description>
+               <bitOffset>8</bitOffset>
+               <bitWidth>2</bitWidth>
++              <enumeratedValues>
++                <name>PSIZE_VALUE</name>
++                <enumeratedValue>
++                  <name>SZ8</name>
++                  <description>8 bits</description>
++                  <value>0</value>
++                  <name>SZ16</name>
++                  <description>16 bits</description>
++                  <value>1</value>
++                  <name>SZ32</name>
++                  <description>32 bits</description>
++                  <value>2</value>
++                </enumeratedValue>
++              </enumeratedValues>
+             </field>
+             <field>
+               <name>MSIZE</name>
+               <description>Memory size</description>
+               <bitOffset>10</bitOffset>
+               <bitWidth>2</bitWidth>
++              <enumeratedValues derivedFrom="PSIZE_VALUE">
++              </enumeratedValues>
+             </field>
+             <field>
+               <name>PL</name>
+               <description>Channel Priority level</description>
+               <bitOffset>12</bitOffset>
+               <bitWidth>2</bitWidth>
++              <enumeratedValues>
++                <name>PRI_LVL</name>
++                <enumeratedValue>
++                  <name>Low</name>
++                  <value>0</value>
++                </enumeratedValue>
++                <enumeratedValue>
++                  <name>Medium</name>
++                  <value>1</value>
++                </enumeratedValue>
++                <enumeratedValue>
++                  <name>High</name>
++                  <value>2</value>
++                </enumeratedValue>
++                <enumeratedValue>
++                  <name>VeryHigh</name>
++                  <value>3</value>
++                </enumeratedValue>
++              </enumeratedValues>
+             </field>
+             <field>
+               <name>MEM2MEM</name>
+@@ -6024,18 +7032,53 @@
+               <description>Peripheral size</description>
+               <bitOffset>8</bitOffset>
+               <bitWidth>2</bitWidth>
++              <enumeratedValues>
++                <name>PSIZE_VALUE</name>
++                <enumeratedValue>
++                  <name>SZ8</name>
++                  <description>8 bits</description>
++                  <value>0</value>
++                  <name>SZ16</name>
++                  <description>16 bits</description>
++                  <value>1</value>
++                  <name>SZ32</name>
++                  <description>32 bits</description>
++                  <value>2</value>
++                </enumeratedValue>
++              </enumeratedValues>
+             </field>
+             <field>
+               <name>MSIZE</name>
+               <description>Memory size</description>
+               <bitOffset>10</bitOffset>
+               <bitWidth>2</bitWidth>
++              <enumeratedValues derivedFrom="PSIZE_VALUE">
++              </enumeratedValues>
+             </field>
+             <field>
+               <name>PL</name>
+               <description>Channel Priority level</description>
+               <bitOffset>12</bitOffset>
+               <bitWidth>2</bitWidth>
++              <enumeratedValues>
++                <name>PRI_LVL</name>
++                <enumeratedValue>
++                  <name>Low</name>
++                  <value>0</value>
++                </enumeratedValue>
++                <enumeratedValue>
++                  <name>Medium</name>
++                  <value>1</value>
++                </enumeratedValue>
++                <enumeratedValue>
++                  <name>High</name>
++                  <value>2</value>
++                </enumeratedValue>
++                <enumeratedValue>
++                  <name>VeryHigh</name>
++                  <value>3</value>
++                </enumeratedValue>
++              </enumeratedValues>
+             </field>
+             <field>
+               <name>MEM2MEM</name>
+@@ -6158,18 +7201,53 @@
+               <description>Peripheral size</description>
+               <bitOffset>8</bitOffset>
+               <bitWidth>2</bitWidth>
++              <enumeratedValues>
++                <name>PSIZE_VALUE</name>
++                <enumeratedValue>
++                  <name>SZ8</name>
++                  <description>8 bits</description>
++                  <value>0</value>
++                  <name>SZ16</name>
++                  <description>16 bits</description>
++                  <value>1</value>
++                  <name>SZ32</name>
++                  <description>32 bits</description>
++                  <value>2</value>
++                </enumeratedValue>
++              </enumeratedValues>
+             </field>
+             <field>
+               <name>MSIZE</name>
+               <description>Memory size</description>
+               <bitOffset>10</bitOffset>
+               <bitWidth>2</bitWidth>
++              <enumeratedValues derivedFrom="PSIZE_VALUE">
++              </enumeratedValues>
+             </field>
+             <field>
+               <name>PL</name>
+               <description>Channel Priority level</description>
+               <bitOffset>12</bitOffset>
+               <bitWidth>2</bitWidth>
++              <enumeratedValues>
++                <name>PRI_LVL</name>
++                <enumeratedValue>
++                  <name>Low</name>
++                  <value>0</value>
++                </enumeratedValue>
++                <enumeratedValue>
++                  <name>Medium</name>
++                  <value>1</value>
++                </enumeratedValue>
++                <enumeratedValue>
++                  <name>High</name>
++                  <value>2</value>
++                </enumeratedValue>
++                <enumeratedValue>
++                  <name>VeryHigh</name>
++                  <value>3</value>
++                </enumeratedValue>
++              </enumeratedValues>
+             </field>
+             <field>
+               <name>MEM2MEM</name>
+@@ -6292,18 +7370,53 @@
+               <description>Peripheral size</description>
+               <bitOffset>8</bitOffset>
+               <bitWidth>2</bitWidth>
++              <enumeratedValues>
++                <name>PSIZE_VALUE</name>
++                <enumeratedValue>
++                  <name>SZ8</name>
++                  <description>8 bits</description>
++                  <value>0</value>
++                  <name>SZ16</name>
++                  <description>16 bits</description>
++                  <value>1</value>
++                  <name>SZ32</name>
++                  <description>32 bits</description>
++                  <value>2</value>
++                </enumeratedValue>
++              </enumeratedValues>
+             </field>
+             <field>
+               <name>MSIZE</name>
+               <description>Memory size</description>
+               <bitOffset>10</bitOffset>
+               <bitWidth>2</bitWidth>
++              <enumeratedValues derivedFrom="PSIZE_VALUE">
++              </enumeratedValues>
+             </field>
+             <field>
+               <name>PL</name>
+               <description>Channel Priority level</description>
+               <bitOffset>12</bitOffset>
+               <bitWidth>2</bitWidth>
++              <enumeratedValues>
++                <name>PRI_LVL</name>
++                <enumeratedValue>
++                  <name>Low</name>
++                  <value>0</value>
++                </enumeratedValue>
++                <enumeratedValue>
++                  <name>Medium</name>
++                  <value>1</value>
++                </enumeratedValue>
++                <enumeratedValue>
++                  <name>High</name>
++                  <value>2</value>
++                </enumeratedValue>
++                <enumeratedValue>
++                  <name>VeryHigh</name>
++                  <value>3</value>
++                </enumeratedValue>
++              </enumeratedValues>
+             </field>
+             <field>
+               <name>MEM2MEM</name>
+@@ -6426,18 +7539,53 @@
+               <description>Peripheral size</description>
+               <bitOffset>8</bitOffset>
+               <bitWidth>2</bitWidth>
++              <enumeratedValues>
++                <name>PSIZE_VALUE</name>
++                <enumeratedValue>
++                  <name>SZ8</name>
++                  <description>8 bits</description>
++                  <value>0</value>
++                  <name>SZ16</name>
++                  <description>16 bits</description>
++                  <value>1</value>
++                  <name>SZ32</name>
++                  <description>32 bits</description>
++                  <value>2</value>
++                </enumeratedValue>
++              </enumeratedValues>
+             </field>
+             <field>
+               <name>MSIZE</name>
+               <description>Memory size</description>
+               <bitOffset>10</bitOffset>
+               <bitWidth>2</bitWidth>
++              <enumeratedValues derivedFrom="PSIZE_VALUE">
++              </enumeratedValues>
+             </field>
+             <field>
+               <name>PL</name>
+               <description>Channel Priority level</description>
+               <bitOffset>12</bitOffset>
+               <bitWidth>2</bitWidth>
++              <enumeratedValues>
++                <name>PRI_LVL</name>
++                <enumeratedValue>
++                  <name>Low</name>
++                  <value>0</value>
++                </enumeratedValue>
++                <enumeratedValue>
++                  <name>Medium</name>
++                  <value>1</value>
++                </enumeratedValue>
++                <enumeratedValue>
++                  <name>High</name>
++                  <value>2</value>
++                </enumeratedValue>
++                <enumeratedValue>
++                  <name>VeryHigh</name>
++                  <value>3</value>
++                </enumeratedValue>
++              </enumeratedValues>
+             </field>
+             <field>
+               <name>MEM2MEM</name>
+@@ -6589,6 +7737,39 @@
+               <description>Center-aligned mode selection</description>
+               <bitOffset>5</bitOffset>
+               <bitWidth>2</bitWidth>
++              <enumeratedValues>
++                <name>CENTER_ALIGNED_MODE</name>
++                <enumeratedValue>
++                  <name>EdgeAligned</name>
++                  <description>Edge-aligned mode.
++The counter counts up or down depending on the direction bit (DIR).</description>
++                  <value>0</value>
++                </enumeratedValue>
++                <enumeratedValue>
++                  <name>CenterAligned1</name>
++                  <description>Center-aligned mode 1.
++The counter counts up and down alternatively. Output compare
++interrupt flags of channels configured in output (CCxS=00 in TIMx_CCMRx register) are set
++only when the counter is counting down.</description>
++                  <value>1</value>
++                </enumeratedValue>
++                <enumeratedValue>
++                  <name>CenterAligned2</name>
++                  <description>Center-aligned mode 2.
++The counter counts up and down alternatively. Output compare
++interrupt flags of channels configured in output (CCxS=00 in TIMx_CCMRx register) are set
++only when the counter is counting up.</description>
++                  <value>2</value>
++                </enumeratedValue>
++                <enumeratedValue>
++                  <name>CenterAligned3</name>
++                  <description>Center-aligned mode 3.
++The counter counts up and down alternatively. Output compare
++interrupt flags of channels configured in output (CCxS=00 in TIMx_CCMRx register) are set
++both when the counter is counting up or down.</description>
++                  <value>3</value>
++                </enumeratedValue>
++              </enumeratedValues>
+             </field>
+             <field>
+               <name>ARPE</name>
+@@ -6630,6 +7811,64 @@
+               <description>Master mode selection</description>
+               <bitOffset>4</bitOffset>
+               <bitWidth>3</bitWidth>
++              <enumeratedValues>
++                <name>MASTER_MODE</name>
++                <enumeratedValue>
++                  <name>Reset</name>
++                  <description>Reset -
++the UG bit from the TIMx_EGR register is used as trigger output (TRGO). If the
++reset is generated by the trigger input (slave mode controller configured in reset mode) then
++the signal on TRGO is delayed compared to the actual reset.</description>
++                  <value>0</value>
++                </enumeratedValue>
++                <enumeratedValue>
++                  <name>Enable</name>
++                  <description>Enable -
++the Counter enable signal, CNT_EN, is used as trigger output (TRGO). It is
++useful to start several timers at the same time or to control a window in which a slave timer is
++enabled. The Counter Enable signal is generated by a logic OR between CEN control bit
++and the trigger input when configured in gated mode.
++When the Counter Enable signal is controlled by the trigger input, there is a delay on TRGO,
++except if the master/slave mode is selected (see the MSM bit description in TIMx_SMCR
++register).</description>
++                  <value>1</value>
++                </enumeratedValue>
++                <enumeratedValue>
++                  <name>Update</name>
++                  <description>Update -
++The update event is selected as trigger output (TRGO). For instance a master
++timer can then be used as a prescaler for a slave timer.</description>
++                  <value>2</value>
++                </enumeratedValue>
++                <enumeratedValue>
++                  <name>ComparePulse</name>
++                  <description>Compare Pulse -
++The trigger output send a positive pulse when the CC1IF flag is to be
++set (even if it was already high), as soon as a capture or a compare match occurred.
++(TRGO)</description>
++                  <value>3</value>
++                </enumeratedValue>
++                <enumeratedValue>
++                  <name>CompareOC1</name>
++                  <description>Compare - OC1REF signal is used as trigger output (TRGO)</description>
++                  <value>4</value>
++                </enumeratedValue>
++                <enumeratedValue>
++                  <name>CompareOC2</name>
++                  <description>Compare - OC2REF signal is used as trigger output (TRGO)</description>
++                  <value>5</value>
++                </enumeratedValue>
++                <enumeratedValue>
++                  <name>CompareOC3</name>
++                  <description>Compare - OC3REF signal is used as trigger output (TRGO)</description>
++                  <value>6</value>
++                </enumeratedValue>
++                <enumeratedValue>
++                  <name>CompareOC4</name>
++                  <description>Compare - OC4REF signal is used as trigger output (TRGO)</description>
++                  <value>7</value>
++                </enumeratedValue>
++              </enumeratedValues>
+             </field>
+             <field>
+               <name>CCDS</name>
+@@ -6653,6 +7892,78 @@
+               <description>Slave mode selection</description>
+               <bitOffset>0</bitOffset>
+               <bitWidth>3</bitWidth>
++              <enumeratedValues>
++                <name>SLAVE_MODE</name>
++                <enumeratedValue>
++                  <name>Disabled</name>
++                  <description>Slave mode disabled -
++if CEN = ‘1 then the prescaler is clocked directly by the internal clock.
++                  </description>
++                  <value>0</value>
++                </enumeratedValue>
++                <enumeratedValue>
++                  <name>Encoder1</name>
++                  <description>Encoder mode 1 - Counter counts up/down on TI1FP1 edge depending on TI2FP2
++level.
++                  </description>
++                  <value>1</value>
++                </enumeratedValue>
++                <enumeratedValue>
++                  <name>Encoder2</name>
++                  <description>Encoder mode 2 - Counter counts up/down on TI1FP2 edge depending on TI2FP1
++level.
++                  </description>
++                  <value>2</value>
++                </enumeratedValue>
++                <enumeratedValue>
++                  <name>Encoder3</name>
++                  <description>
++                    Encoder mode 3 - Counter counts up/down on both TI1FP1 and TI2FP2 edges
++                    depending on the level of the other input.
++                  </description>
++                  <value>3</value>
++                </enumeratedValue>
++                <enumeratedValue>
++                  <name>Reset</name>
++                  <description>
++                    Reset Mode - Rising edge of the selected trigger input (TRGI) reinitializes the counter
++                    and generates an update of the registers.
++                  </description>
++                  <value>4</value>
++                </enumeratedValue>
++                <enumeratedValue>
++                  <name>Gated</name>
++                  <description>
++                    Gated Mode - The counter clock is enabled when the trigger input (TRGI) is high. The
++                    counter stops (but is not reset) as soon as the trigger becomes low. Both start and stop of
++                    the counter are controlled.
++                  </description>
++                  <value>5</value>
++                </enumeratedValue>
++                <enumeratedValue>
++                  <name>Trigger</name>
++                  <description>
++                    Trigger Mode - The counter starts at a rising edge of the trigger TRGI (but it is not
++                    reset). Only the start of the counter is controlled.
++                  </description>
++                  <value>6</value>
++                </enumeratedValue>
++                <enumeratedValue>
++                  <name>ExternalClock</name>
++                  <description>
++                    External Clock Mode 1 - Rising edges of the selected trigger (TRGI) clock the counter.
++                  </description>
++                  <value>7</value>
++                <enumeratedValue>
++                  <name>CombinedResetTrigger</name>
++                  <description>
++                    Combined reset + trigger mode - Rising edge of the selected trigger input (TRGI)
++                    reinitializes the counter, generates an update of the registers and starts the counter
++                  </description>
++                  <value>8</value>
++                </enumeratedValue>
++                </enumeratedValue>
++              </enumeratedValues>
+             </field>
+             <field>
+               <name>OCCS</name>
+@@ -6665,6 +7976,49 @@
+               <description>Trigger selection</description>
+               <bitOffset>4</bitOffset>
+               <bitWidth>3</bitWidth>
++              <enumeratedValues>
++                <name>TRIGGER</name>
++                <enumeratedValue>
++                  <name>Internal0</name>
++                  <description>Internal Trigger 0 (ITR0). reserved</description>
++                  <value>0</value>
++                </enumeratedValue>
++                <enumeratedValue>
++                  <name>Internal1</name>
++                  <description>Internal Trigger 1 (ITR1).</description>
++                  <value>1</value>
++                </enumeratedValue>
++                <enumeratedValue>
++                  <name>Internal2</name>
++                  <description>Internal Trigger 2 (ITR2).</description>
++                  <value>2</value>
++                </enumeratedValue>
++                <enumeratedValue>
++                  <name>Internal3</name>
++                  <description>Internal Trigger 3 (ITR3). reserved</description>
++                  <value>3</value>
++                </enumeratedValue>
++                <enumeratedValue>
++                  <name>TI1Edge</name>
++                  <description>TI1 Edge Detector (TI1F_ED)</description>
++                  <value>4</value>
++                </enumeratedValue>
++                <enumeratedValue>
++                  <name>FilteredTimer1</name>
++                  <description>Filtered Timer Input 1 (TI1FP1)</description>
++                  <value>5</value>
++                </enumeratedValue>
++                <enumeratedValue>
++                  <name>FilteredTimer2</name>
++                  <description>Filtered Timer Input 2 (TI2FP2)</description>
++                  <value>6</value>
++                </enumeratedValue>
++                <enumeratedValue>
++                  <name>External</name>
++                  <description>External Trigger input (ETRF)</description>
++                  <value>7</value>
++                </enumeratedValue>
++              </enumeratedValues>
+             </field>
+             <field>
+               <name>MSM</name>
+@@ -6937,6 +8291,130 @@
+               <description>Output compare 1 mode</description>
+               <bitOffset>4</bitOffset>
+               <bitWidth>3</bitWidth>
++              <enumeratedValues>
++                <name>OUTPUT_COMPARE</name>
++                <enumeratedValue>
++                  <name>Frozen</name>
++                  <description>
++Frozen - The comparison between the output compare register TIMx_CCR1 and the
++counter TIMx_CNT has no effect on the outputs.(this mode is used to generate a timing
++base).
++                  </description>
++                  <value>0</value>
++                </enumeratedValue>
++                <enumeratedValue>
++                  <name>ActiveOnMatch</name>
++                  <description>
++Set channel 1 to active level on match. OC1REF signal is forced high when the
++counter TIMx_CNT matches the capture/compare register 1 (TIMx_CCR1).
++                  </description>
++                  <value>1</value>
++                </enumeratedValue>
++                <enumeratedValue>
++                  <name>InactiveOnMatch</name>
++                  <description>
++Set channel 1 to inactive level on match. OC1REF signal is forced low when the
++counter TIMx_CNT matches the capture/compare register 1 (TIMx_CCR1).
++                  </description>
++                  <value>2</value>
++                </enumeratedValue>
++                <enumeratedValue>
++                  <name>Toggle</name>
++                  <description>
++                    Toggle - OC1REF toggles when TIMx_CNT=TIMx_CCR1.
++                  </description>
++                  <value>3</value>
++                </enumeratedValue>
++                <enumeratedValue>
++                  <name>ForceInactive</name>
++                  <description>
++                    Force inactive level - OC1REF is forced low.
++                  </description>
++                  <value>4</value>
++                </enumeratedValue>
++                <enumeratedValue>
++                  <name>ForceActive</name>
++                  <description>
++                    Force active level - OC1REF is forced high.
++                  </description>
++                  <value>5</value>
++                </enumeratedValue>
++                <enumeratedValue>
++                  <name>PWM1</name>
++                  <description>
++PWM mode 1 - In upcounting, channel 1 is active as long as TIMx_CNT&lt;TIMx_CCR1
++else inactive. In downcounting, channel 1 is inactive (OC1REF=‘0) as long as
++TIMx_CNT&gt;TIMx_CCR1 else active (OC1REF=1).
++                  </description>
++                  <value>6</value>
++                </enumeratedValue>
++                <enumeratedValue>
++                  <name>PWM2</name>
++                  <description>
++PWM mode 2 - In upcounting, channel 1 is inactive as long as
++TIMx_CNT&lt;TIMx_CCR1 else active. In downcounting, channel 1 is active as long as
++TIMx_CNT&gt;TIMx_CCR1 else inactive.
++                  </description>
++                  <value>7</value>
++                </enumeratedValue>
++                <enumeratedValue>
++                  <name>RetriggerableOPM1</name>
++                  <description>
++Retriggerable OPM mode 1 - In up-counting mode, the channel is active until a trigger
++event is detected (on TRGI signal). Then, a comparison is performed as in PWM mode 1
++and the channels becomes inactive again at the next update. In down-counting mode, the
++channel is inactive until a trigger event is detected (on TRGI signal). Then, a comparison is
++performed as in PWM mode 1 and the channels becomes inactive again at the next update.
++                  </description>
++                  <value>8</value>
++                </enumeratedValue>
++                <enumeratedValue>
++                  <name>RetriggerableOPM2</name>
++                  <description>
++Retriggerable OPM mode 2 - In up-counting mode, the channel is inactive until a
++trigger event is detected (on TRGI signal). Then, a comparison is performed as in PWM
++mode 2 and the channels becomes inactive again at the next update. In down-counting
++mode, the channel is active until a trigger event is detected (on TRGI signal). Then, a
++comparison is performed as in PWM mode 1 and the channels becomes active again at the
++next update.
++                  </description>
++                  <value>9</value>
++                </enumeratedValue>
++                <enumeratedValue>
++                  <name>CombinedPWM1</name>
++                  <description>
++Combined PWM mode 1 - OC1REF has the same behavior as in PWM mode 1.
++OC1REFC is the logical OR between OC1REF and OC2REF.
++                  </description>
++                  <value>12</value>
++                </enumeratedValue>
++                <enumeratedValue>
++                  <name>CombinedPWM2</name>
++                  <description>
++Combined PWM mode 2 - OC1REF has the same behavior as in PWM mode 2.
++OC1REFC is the logical AND between OC1REF and OC2REF.
++                  </description>
++                  <value>13</value>
++                </enumeratedValue>
++                <enumeratedValue>
++                  <name>AsymmetricPWM1</name>
++                  <description>
++Asymmetric PWM mode 1 - OC1REF has the same behavior as in PWM mode 1.
++OC1REFC outputs OC1REF when the counter is counting up, OC2REF when it is counting
++down.
++                  </description>
++                  <value>14</value>
++                </enumeratedValue>
++                <enumeratedValue>
++                  <name>AsymmetricPWM2</name>
++                  <description>
++Asymmetric PWM mode 2 - OC1REF has the same behavior as in PWM mode 2.
++OC1REFC outputs OC1REF when the counter is counting up, OC2REF when it is counting
++down.
++                  </description>
++                  <value>15</value>
++                </enumeratedValue>
++              </enumeratedValues>
+             </field>
+             <field>
+               <name>OC1CE</name>
+@@ -6967,6 +8445,8 @@
+               <description>Output compare 2 mode</description>
+               <bitOffset>12</bitOffset>
+               <bitWidth>3</bitWidth>
++              <enumeratedValues derivedFrom="OUTPUT_COMPARE">
++              </enumeratedValues>
+             </field>
+             <field>
+               <name>OC2CE</name>
+@@ -7068,6 +8548,130 @@
+               <description>Output compare 3 mode</description>
+               <bitOffset>4</bitOffset>
+               <bitWidth>3</bitWidth>
++              <enumeratedValues>
++                <name>OUTPUT_COMPARE</name>
++                <enumeratedValue>
++                  <name>Frozen</name>
++                  <description>
++Frozen - The comparison between the output compare register TIMx_CCR1 and the
++counter TIMx_CNT has no effect on the outputs.(this mode is used to generate a timing
++base).
++                  </description>
++                  <value>0</value>
++                </enumeratedValue>
++                <enumeratedValue>
++                  <name>ActiveOnMatch</name>
++                  <description>
++Set channel 1 to active level on match. OC1REF signal is forced high when the
++counter TIMx_CNT matches the capture/compare register 1 (TIMx_CCR1).
++                  </description>
++                  <value>1</value>
++                </enumeratedValue>
++                <enumeratedValue>
++                  <name>InactiveOnMatch</name>
++                  <description>
++Set channel 1 to inactive level on match. OC1REF signal is forced low when the
++counter TIMx_CNT matches the capture/compare register 1 (TIMx_CCR1).
++                  </description>
++                  <value>2</value>
++                </enumeratedValue>
++                <enumeratedValue>
++                  <name>Toggle</name>
++                  <description>
++                    Toggle - OC1REF toggles when TIMx_CNT=TIMx_CCR1.
++                  </description>
++                  <value>3</value>
++                </enumeratedValue>
++                <enumeratedValue>
++                  <name>ForceInactive</name>
++                  <description>
++                    Force inactive level - OC1REF is forced low.
++                  </description>
++                  <value>4</value>
++                </enumeratedValue>
++                <enumeratedValue>
++                  <name>ForceActive</name>
++                  <description>
++                    Force active level - OC1REF is forced high.
++                  </description>
++                  <value>5</value>
++                </enumeratedValue>
++                <enumeratedValue>
++                  <name>PWM1</name>
++                  <description>
++PWM mode 1 - In upcounting, channel 1 is active as long as TIMx_CNT&lt;TIMx_CCR1
++else inactive. In downcounting, channel 1 is inactive (OC1REF=‘0) as long as
++TIMx_CNT&gt;TIMx_CCR1 else active (OC1REF=1).
++                  </description>
++                  <value>6</value>
++                </enumeratedValue>
++                <enumeratedValue>
++                  <name>PWM2</name>
++                  <description>
++PWM mode 2 - In upcounting, channel 1 is inactive as long as
++TIMx_CNT&lt;TIMx_CCR1 else active. In downcounting, channel 1 is active as long as
++TIMx_CNT&gt;TIMx_CCR1 else inactive.
++                  </description>
++                  <value>7</value>
++                </enumeratedValue>
++                <enumeratedValue>
++                  <name>RetriggerableOPM1</name>
++                  <description>
++Retriggerable OPM mode 1 - In up-counting mode, the channel is active until a trigger
++event is detected (on TRGI signal). Then, a comparison is performed as in PWM mode 1
++and the channels becomes inactive again at the next update. In down-counting mode, the
++channel is inactive until a trigger event is detected (on TRGI signal). Then, a comparison is
++performed as in PWM mode 1 and the channels becomes inactive again at the next update.
++                  </description>
++                  <value>8</value>
++                </enumeratedValue>
++                <enumeratedValue>
++                  <name>RetriggerableOPM2</name>
++                  <description>
++Retriggerable OPM mode 2 - In up-counting mode, the channel is inactive until a
++trigger event is detected (on TRGI signal). Then, a comparison is performed as in PWM
++mode 2 and the channels becomes inactive again at the next update. In down-counting
++mode, the channel is active until a trigger event is detected (on TRGI signal). Then, a
++comparison is performed as in PWM mode 1 and the channels becomes active again at the
++next update.
++                  </description>
++                  <value>9</value>
++                </enumeratedValue>
++                <enumeratedValue>
++                  <name>CombinedPWM1</name>
++                  <description>
++Combined PWM mode 1 - OC1REF has the same behavior as in PWM mode 1.
++OC1REFC is the logical OR between OC1REF and OC2REF.
++                  </description>
++                  <value>12</value>
++                </enumeratedValue>
++                <enumeratedValue>
++                  <name>CombinedPWM2</name>
++                  <description>
++Combined PWM mode 2 - OC1REF has the same behavior as in PWM mode 2.
++OC1REFC is the logical AND between OC1REF and OC2REF.
++                  </description>
++                  <value>13</value>
++                </enumeratedValue>
++                <enumeratedValue>
++                  <name>AsymmetricPWM1</name>
++                  <description>
++Asymmetric PWM mode 1 - OC1REF has the same behavior as in PWM mode 1.
++OC1REFC outputs OC1REF when the counter is counting up, OC2REF when it is counting
++down.
++                  </description>
++                  <value>14</value>
++                </enumeratedValue>
++                <enumeratedValue>
++                  <name>AsymmetricPWM2</name>
++                  <description>
++Asymmetric PWM mode 2 - OC1REF has the same behavior as in PWM mode 2.
++OC1REFC outputs OC1REF when the counter is counting up, OC2REF when it is counting
++down.
++                  </description>
++                  <value>15</value>
++                </enumeratedValue>
++              </enumeratedValues>
+             </field>
+             <field>
+               <name>OC3CE</name>
+@@ -7098,6 +8702,8 @@
+               <description>Output compare 4 mode</description>
+               <bitOffset>12</bitOffset>
+               <bitWidth>3</bitWidth>
++              <enumeratedValue derivedFrom="OUTPUT_COMPARE">
++              </enumeratedValue>
+             </field>
+             <field>
+               <name>O24CE</name>
+@@ -7572,6 +9178,64 @@
+               <description>Master mode selection</description>
+               <bitOffset>4</bitOffset>
+               <bitWidth>3</bitWidth>
++              <enumeratedValues>
++                <name>MASTER_MODE</name>
++                <enumeratedValue>
++                  <name>Reset</name>
++                  <description>Reset -
++the UG bit from the TIMx_EGR register is used as trigger output (TRGO). If the
++reset is generated by the trigger input (slave mode controller configured in reset mode) then
++the signal on TRGO is delayed compared to the actual reset.</description>
++                  <value>0</value>
++                </enumeratedValue>
++                <enumeratedValue>
++                  <name>Enable</name>
++                  <description>Enable -
++the Counter enable signal, CNT_EN, is used as trigger output (TRGO). It is
++useful to start several timers at the same time or to control a window in which a slave timer is
++enabled. The Counter Enable signal is generated by a logic OR between CEN control bit
++and the trigger input when configured in gated mode.
++When the Counter Enable signal is controlled by the trigger input, there is a delay on TRGO,
++except if the master/slave mode is selected (see the MSM bit description in TIMx_SMCR
++register).</description>
++                  <value>1</value>
++                </enumeratedValue>
++                <enumeratedValue>
++                  <name>Update</name>
++                  <description>Update -
++The update event is selected as trigger output (TRGO). For instance a master
++timer can then be used as a prescaler for a slave timer.</description>
++                  <value>2</value>
++                </enumeratedValue>
++                <enumeratedValue>
++                  <name>ComparePulse</name>
++                  <description>Compare Pulse -
++The trigger output send a positive pulse when the CC1IF flag is to be
++set (even if it was already high), as soon as a capture or a compare match occurred.
++(TRGO)</description>
++                  <value>3</value>
++                </enumeratedValue>
++                <enumeratedValue>
++                  <name>CompareOC1</name>
++                  <description>Compare - OC1REF signal is used as trigger output (TRGO)</description>
++                  <value>4</value>
++                </enumeratedValue>
++                <enumeratedValue>
++                  <name>CompareOC2</name>
++                  <description>Compare - OC2REF signal is used as trigger output (TRGO)</description>
++                  <value>5</value>
++                </enumeratedValue>
++                <enumeratedValue>
++                  <name>CompareOC3</name>
++                  <description>Compare - OC3REF signal is used as trigger output (TRGO)</description>
++                  <value>6</value>
++                </enumeratedValue>
++                <enumeratedValue>
++                  <name>CompareOC4</name>
++                  <description>Compare - OC4REF signal is used as trigger output (TRGO)</description>
++                  <value>7</value>
++                </enumeratedValue>
++              </enumeratedValues>
+             </field>
+             <field>
+               <name>TI1S</name>
+@@ -7613,12 +9277,127 @@
+               <description>Slave mode selection</description>
+               <bitOffset>0</bitOffset>
+               <bitWidth>3</bitWidth>
++              <enumeratedValues>
++                <name>SLAVE_MODE</name>
++                <enumeratedValue>
++                  <name>Disabled</name>
++                  <description>Slave mode disabled -
++if CEN = ‘1 then the prescaler is clocked directly by the internal clock.
++                  </description>
++                  <value>0</value>
++                </enumeratedValue>
++                <enumeratedValue>
++                  <name>Encoder1</name>
++                  <description>Encoder mode 1 - Counter counts up/down on TI1FP1 edge depending on TI2FP2
++level.
++                  </description>
++                  <value>1</value>
++                </enumeratedValue>
++                <enumeratedValue>
++                  <name>Encoder2</name>
++                  <description>Encoder mode 2 - Counter counts up/down on TI1FP2 edge depending on TI2FP1
++level.
++                  </description>
++                  <value>2</value>
++                </enumeratedValue>
++                <enumeratedValue>
++                  <name>Encoder3</name>
++                  <description>
++                    Encoder mode 3 - Counter counts up/down on both TI1FP1 and TI2FP2 edges
++                    depending on the level of the other input.
++                  </description>
++                  <value>3</value>
++                </enumeratedValue>
++                <enumeratedValue>
++                  <name>Reset</name>
++                  <description>
++                    Reset Mode - Rising edge of the selected trigger input (TRGI) reinitializes the counter
++                    and generates an update of the registers.
++                  </description>
++                  <value>4</value>
++                </enumeratedValue>
++                <enumeratedValue>
++                  <name>Gated</name>
++                  <description>
++                    Gated Mode - The counter clock is enabled when the trigger input (TRGI) is high. The
++                    counter stops (but is not reset) as soon as the trigger becomes low. Both start and stop of
++                    the counter are controlled.
++                  </description>
++                  <value>5</value>
++                </enumeratedValue>
++                <enumeratedValue>
++                  <name>Trigger</name>
++                  <description>
++                    Trigger Mode - The counter starts at a rising edge of the trigger TRGI (but it is not
++                    reset). Only the start of the counter is controlled.
++                  </description>
++                  <value>6</value>
++                </enumeratedValue>
++                <enumeratedValue>
++                  <name>ExternalClock</name>
++                  <description>
++                    External Clock Mode 1 - Rising edges of the selected trigger (TRGI) clock the counter.
++                  </description>
++                  <value>7</value>
++                <enumeratedValue>
++                  <name>CombinedResetTrigger</name>
++                  <description>
++                    Combined reset + trigger mode - Rising edge of the selected trigger input (TRGI)
++                    reinitializes the counter, generates an update of the registers and starts the counter
++                  </description>
++                  <value>8</value>
++                </enumeratedValue>
++                </enumeratedValue>
++              </enumeratedValues>
+             </field>
+             <field>
+               <name>TS</name>
+               <description>Trigger selection</description>
+               <bitOffset>4</bitOffset>
+               <bitWidth>3</bitWidth>
++              <enumeratedValues>
++                <name>TRIGGER</name>
++                <enumeratedValue>
++                  <name>Internal0</name>
++                  <description>Internal Trigger 0 (ITR0). reserved</description>
++                  <value>0</value>
++                </enumeratedValue>
++                <enumeratedValue>
++                  <name>Internal1</name>
++                  <description>Internal Trigger 1 (ITR1).</description>
++                  <value>1</value>
++                </enumeratedValue>
++                <enumeratedValue>
++                  <name>Internal2</name>
++                  <description>Internal Trigger 2 (ITR2).</description>
++                  <value>2</value>
++                </enumeratedValue>
++                <enumeratedValue>
++                  <name>Internal3</name>
++                  <description>Internal Trigger 3 (ITR3). reserved</description>
++                  <value>3</value>
++                </enumeratedValue>
++                <enumeratedValue>
++                  <name>TI1Edge</name>
++                  <description>TI1 Edge Detector (TI1F_ED)</description>
++                  <value>4</value>
++                </enumeratedValue>
++                <enumeratedValue>
++                  <name>FilteredTimer1</name>
++                  <description>Filtered Timer Input 1 (TI1FP1)</description>
++                  <value>5</value>
++                </enumeratedValue>
++                <enumeratedValue>
++                  <name>FilteredTimer2</name>
++                  <description>Filtered Timer Input 2 (TI2FP2)</description>
++                  <value>6</value>
++                </enumeratedValue>
++                <enumeratedValue>
++                  <name>External</name>
++                  <description>External Trigger input (ETRF)</description>
++                  <value>7</value>
++                </enumeratedValue>
++              </enumeratedValues>
+             </field>
+             <field>
+               <name>MSM</name>
+@@ -7849,6 +9628,130 @@
+               <description>Output Compare 1 mode</description>
+               <bitOffset>4</bitOffset>
+               <bitWidth>3</bitWidth>
++              <enumeratedValues>
++                <name>OUTPUT_COMPARE</name>
++                <enumeratedValue>
++                  <name>Frozen</name>
++                  <description>
++Frozen - The comparison between the output compare register TIMx_CCR1 and the
++counter TIMx_CNT has no effect on the outputs.(this mode is used to generate a timing
++base).
++                  </description>
++                  <value>0</value>
++                </enumeratedValue>
++                <enumeratedValue>
++                  <name>ActiveOnMatch</name>
++                  <description>
++Set channel 1 to active level on match. OC1REF signal is forced high when the
++counter TIMx_CNT matches the capture/compare register 1 (TIMx_CCR1).
++                  </description>
++                  <value>1</value>
++                </enumeratedValue>
++                <enumeratedValue>
++                  <name>InactiveOnMatch</name>
++                  <description>
++Set channel 1 to inactive level on match. OC1REF signal is forced low when the
++counter TIMx_CNT matches the capture/compare register 1 (TIMx_CCR1).
++                  </description>
++                  <value>2</value>
++                </enumeratedValue>
++                <enumeratedValue>
++                  <name>Toggle</name>
++                  <description>
++                    Toggle - OC1REF toggles when TIMx_CNT=TIMx_CCR1.
++                  </description>
++                  <value>3</value>
++                </enumeratedValue>
++                <enumeratedValue>
++                  <name>ForceInactive</name>
++                  <description>
++                    Force inactive level - OC1REF is forced low.
++                  </description>
++                  <value>4</value>
++                </enumeratedValue>
++                <enumeratedValue>
++                  <name>ForceActive</name>
++                  <description>
++                    Force active level - OC1REF is forced high.
++                  </description>
++                  <value>5</value>
++                </enumeratedValue>
++                <enumeratedValue>
++                  <name>PWM1</name>
++                  <description>
++PWM mode 1 - In upcounting, channel 1 is active as long as TIMx_CNT&lt;TIMx_CCR1
++else inactive. In downcounting, channel 1 is inactive (OC1REF=‘0) as long as
++TIMx_CNT&gt;TIMx_CCR1 else active (OC1REF=1).
++                  </description>
++                  <value>6</value>
++                </enumeratedValue>
++                <enumeratedValue>
++                  <name>PWM2</name>
++                  <description>
++PWM mode 2 - In upcounting, channel 1 is inactive as long as
++TIMx_CNT&lt;TIMx_CCR1 else active. In downcounting, channel 1 is active as long as
++TIMx_CNT&gt;TIMx_CCR1 else inactive.
++                  </description>
++                  <value>7</value>
++                </enumeratedValue>
++                <enumeratedValue>
++                  <name>RetriggerableOPM1</name>
++                  <description>
++Retriggerable OPM mode 1 - In up-counting mode, the channel is active until a trigger
++event is detected (on TRGI signal). Then, a comparison is performed as in PWM mode 1
++and the channels becomes inactive again at the next update. In down-counting mode, the
++channel is inactive until a trigger event is detected (on TRGI signal). Then, a comparison is
++performed as in PWM mode 1 and the channels becomes inactive again at the next update.
++                  </description>
++                  <value>8</value>
++                </enumeratedValue>
++                <enumeratedValue>
++                  <name>RetriggerableOPM2</name>
++                  <description>
++Retriggerable OPM mode 2 - In up-counting mode, the channel is inactive until a
++trigger event is detected (on TRGI signal). Then, a comparison is performed as in PWM
++mode 2 and the channels becomes inactive again at the next update. In down-counting
++mode, the channel is active until a trigger event is detected (on TRGI signal). Then, a
++comparison is performed as in PWM mode 1 and the channels becomes active again at the
++next update.
++                  </description>
++                  <value>9</value>
++                </enumeratedValue>
++                <enumeratedValue>
++                  <name>CombinedPWM1</name>
++                  <description>
++Combined PWM mode 1 - OC1REF has the same behavior as in PWM mode 1.
++OC1REFC is the logical OR between OC1REF and OC2REF.
++                  </description>
++                  <value>12</value>
++                </enumeratedValue>
++                <enumeratedValue>
++                  <name>CombinedPWM2</name>
++                  <description>
++Combined PWM mode 2 - OC1REF has the same behavior as in PWM mode 2.
++OC1REFC is the logical AND between OC1REF and OC2REF.
++                  </description>
++                  <value>13</value>
++                </enumeratedValue>
++                <enumeratedValue>
++                  <name>AsymmetricPWM1</name>
++                  <description>
++Asymmetric PWM mode 1 - OC1REF has the same behavior as in PWM mode 1.
++OC1REFC outputs OC1REF when the counter is counting up, OC2REF when it is counting
++down.
++                  </description>
++                  <value>14</value>
++                </enumeratedValue>
++                <enumeratedValue>
++                  <name>AsymmetricPWM2</name>
++                  <description>
++Asymmetric PWM mode 2 - OC1REF has the same behavior as in PWM mode 2.
++OC1REFC outputs OC1REF when the counter is counting up, OC2REF when it is counting
++down.
++                  </description>
++                  <value>15</value>
++                </enumeratedValue>
++              </enumeratedValues>
+             </field>
+             <field>
+               <name>CC2S</name>
+@@ -7873,6 +9776,8 @@
+               <description>Output Compare 2 mode</description>
+               <bitOffset>12</bitOffset>
+               <bitWidth>3</bitWidth>
++              <enumeratedValues derivedFrom="OUTPUT_COMPARE">
++              </enumeratedValues>
+             </field>
+             <field>
+               <name>OC1M_3</name>
+@@ -8148,6 +10053,40 @@
+               <description>Lock configuration</description>
+               <bitOffset>8</bitOffset>
+               <bitWidth>2</bitWidth>
++              <enumeratedValues>
++                <name>LOCK_CFG</name>
++                <enumeratedValue>
++                  <name>Off</name>
++                  <description>LOCK OFF - No bit is write protected</description>
++                  <value>0</value>
++                </enumeratedValue>
++                <enumeratedValue>
++                  <name>Level1</name>
++                  <description>
++                    LOCK Level 1 = DTG bits in TIMx_BDTR register, OISx and OISxN bits in TIMx_CR2
++                    register and BKE/BKP/AOE bits in TIMx_BDTR register can no longer be written
++                  </description>
++                  <value>1</value>
++                </enumeratedValue>
++                <enumeratedValue>
++                  <name>Level2</name>
++                  <description>
++                    LOCK Level 2 = LOCK Level 1 + CC Polarity bits (CCxP/CCxNP bits in TIMx_CCER
++                    register, as long as the related channel is configured in output through the CCxS bits) as well
++                    as OSSR and OSSI bits can no longer be written.
++                  </description>
++                  <value>2</value>
++                </enumeratedValue>
++                <enumeratedValue>
++                  <name>Level3</name>
++                  <description>
++                    LOCK Level 3 = LOCK Level 2 + CC Control bits (OCxM and OCxPE bits in
++                    TIMx_CCMRx registers, as long as the related channel is configured in output through the
++                    CCxS bits) can no longer be written.
++                  </description>
++                  <value>3</value>
++                </enumeratedValue>
++              </enumeratedValues>
+             </field>
+             <field>
+               <name>DTG</name>
+@@ -9077,6 +11016,130 @@
+               <description>Output Compare 1 mode</description>
+               <bitOffset>4</bitOffset>
+               <bitWidth>3</bitWidth>
++              <enumeratedValues>
++                <name>OUTPUT_COMPARE</name>
++                <enumeratedValue>
++                  <name>Frozen</name>
++                  <description>
++Frozen - The comparison between the output compare register TIMx_CCR1 and the
++counter TIMx_CNT has no effect on the outputs.(this mode is used to generate a timing
++base).
++                  </description>
++                  <value>0</value>
++                </enumeratedValue>
++                <enumeratedValue>
++                  <name>ActiveOnMatch</name>
++                  <description>
++Set channel 1 to active level on match. OC1REF signal is forced high when the
++counter TIMx_CNT matches the capture/compare register 1 (TIMx_CCR1).
++                  </description>
++                  <value>1</value>
++                </enumeratedValue>
++                <enumeratedValue>
++                  <name>InactiveOnMatch</name>
++                  <description>
++Set channel 1 to inactive level on match. OC1REF signal is forced low when the
++counter TIMx_CNT matches the capture/compare register 1 (TIMx_CCR1).
++                  </description>
++                  <value>2</value>
++                </enumeratedValue>
++                <enumeratedValue>
++                  <name>Toggle</name>
++                  <description>
++                    Toggle - OC1REF toggles when TIMx_CNT=TIMx_CCR1.
++                  </description>
++                  <value>3</value>
++                </enumeratedValue>
++                <enumeratedValue>
++                  <name>ForceInactive</name>
++                  <description>
++                    Force inactive level - OC1REF is forced low.
++                  </description>
++                  <value>4</value>
++                </enumeratedValue>
++                <enumeratedValue>
++                  <name>ForceActive</name>
++                  <description>
++                    Force active level - OC1REF is forced high.
++                  </description>
++                  <value>5</value>
++                </enumeratedValue>
++                <enumeratedValue>
++                  <name>PWM1</name>
++                  <description>
++PWM mode 1 - In upcounting, channel 1 is active as long as TIMx_CNT&lt;TIMx_CCR1
++else inactive. In downcounting, channel 1 is inactive (OC1REF=‘0) as long as
++TIMx_CNT&gt;TIMx_CCR1 else active (OC1REF=1).
++                  </description>
++                  <value>6</value>
++                </enumeratedValue>
++                <enumeratedValue>
++                  <name>PWM2</name>
++                  <description>
++PWM mode 2 - In upcounting, channel 1 is inactive as long as
++TIMx_CNT&lt;TIMx_CCR1 else active. In downcounting, channel 1 is active as long as
++TIMx_CNT&gt;TIMx_CCR1 else inactive.
++                  </description>
++                  <value>7</value>
++                </enumeratedValue>
++                <enumeratedValue>
++                  <name>RetriggerableOPM1</name>
++                  <description>
++Retriggerable OPM mode 1 - In up-counting mode, the channel is active until a trigger
++event is detected (on TRGI signal). Then, a comparison is performed as in PWM mode 1
++and the channels becomes inactive again at the next update. In down-counting mode, the
++channel is inactive until a trigger event is detected (on TRGI signal). Then, a comparison is
++performed as in PWM mode 1 and the channels becomes inactive again at the next update.
++                  </description>
++                  <value>8</value>
++                </enumeratedValue>
++                <enumeratedValue>
++                  <name>RetriggerableOPM2</name>
++                  <description>
++Retriggerable OPM mode 2 - In up-counting mode, the channel is inactive until a
++trigger event is detected (on TRGI signal). Then, a comparison is performed as in PWM
++mode 2 and the channels becomes inactive again at the next update. In down-counting
++mode, the channel is active until a trigger event is detected (on TRGI signal). Then, a
++comparison is performed as in PWM mode 1 and the channels becomes active again at the
++next update.
++                  </description>
++                  <value>9</value>
++                </enumeratedValue>
++                <enumeratedValue>
++                  <name>CombinedPWM1</name>
++                  <description>
++Combined PWM mode 1 - OC1REF has the same behavior as in PWM mode 1.
++OC1REFC is the logical OR between OC1REF and OC2REF.
++                  </description>
++                  <value>12</value>
++                </enumeratedValue>
++                <enumeratedValue>
++                  <name>CombinedPWM2</name>
++                  <description>
++Combined PWM mode 2 - OC1REF has the same behavior as in PWM mode 2.
++OC1REFC is the logical AND between OC1REF and OC2REF.
++                  </description>
++                  <value>13</value>
++                </enumeratedValue>
++                <enumeratedValue>
++                  <name>AsymmetricPWM1</name>
++                  <description>
++Asymmetric PWM mode 1 - OC1REF has the same behavior as in PWM mode 1.
++OC1REFC outputs OC1REF when the counter is counting up, OC2REF when it is counting
++down.
++                  </description>
++                  <value>14</value>
++                </enumeratedValue>
++                <enumeratedValue>
++                  <name>AsymmetricPWM2</name>
++                  <description>
++Asymmetric PWM mode 2 - OC1REF has the same behavior as in PWM mode 2.
++OC1REFC outputs OC1REF when the counter is counting up, OC2REF when it is counting
++down.
++                  </description>
++                  <value>15</value>
++                </enumeratedValue>
++              </enumeratedValues>
+             </field>
+             <field>
+               <name>OC1M_3</name>
+@@ -9263,6 +11326,40 @@
+               <description>Lock configuration</description>
+               <bitOffset>8</bitOffset>
+               <bitWidth>2</bitWidth>
++              <enumeratedValues>
++                <name>LOCK_CFG</name>
++                <enumeratedValue>
++                  <name>Off</name>
++                  <description>LOCK OFF - No bit is write protected</description>
++                  <value>0</value>
++                </enumeratedValue>
++                <enumeratedValue>
++                  <name>Level1</name>
++                  <description>
++                    LOCK Level 1 = DTG bits in TIMx_BDTR register, OISx and OISxN bits in TIMx_CR2
++                    register and BKE/BKP/AOE bits in TIMx_BDTR register can no longer be written
++                  </description>
++                  <value>1</value>
++                </enumeratedValue>
++                <enumeratedValue>
++                  <name>Level2</name>
++                  <description>
++                    LOCK Level 2 = LOCK Level 1 + CC Polarity bits (CCxP/CCxNP bits in TIMx_CCER
++                    register, as long as the related channel is configured in output through the CCxS bits) as well
++                    as OSSR and OSSI bits can no longer be written.
++                  </description>
++                  <value>2</value>
++                </enumeratedValue>
++                <enumeratedValue>
++                  <name>Level3</name>
++                  <description>
++                    LOCK Level 3 = LOCK Level 2 + CC Control bits (OCxM and OCxPE bits in
++                    TIMx_CCMRx registers, as long as the related channel is configured in output through the
++                    CCxS bits) can no longer be written.
++                  </description>
++                  <value>3</value>
++                </enumeratedValue>
++              </enumeratedValues>
+             </field>
+             <field>
+               <name>OSSI</name>
+@@ -9529,6 +11626,32 @@
+               <description>Auto baud rate mode</description>
+               <bitOffset>21</bitOffset>
+               <bitWidth>2</bitWidth>
++              <enumeratedValues>
++                <name>AUTO_BAUD_RATE_MODE</name>
++                <enumeratedValue>
++                  <name>StartBit</name>
++                  <description>Measurement of the start bit is used to detect the baud rate.</description>
++                  <value>0</value>
++                </enumeratedValue>
++                <enumeratedValue>
++                  <name>FallingEdge</name>
++                  <description>
++                    Falling edge to falling edge measurement. (the received frame must start with a single bit = 1 ->
++                    Frame = Start10xxxxxx)
++                  </description>
++                  <value>1</value>
++                </enumeratedValue>
++                <enumeratedValue>
++                  <name>FrameDetection7F</name>
++                  <description>0x7F frame detection.</description>
++                  <value>2</value>
++                </enumeratedValue>
++                <enumeratedValue>
++                  <name>FrameDetection55</name>
++                  <description>0x55 frame detection</description>
++                  <value>3</value>
++                </enumeratedValue>
++              </enumeratedValues>
+             </field>
+             <field>
+               <name>ABREN</name>
+@@ -9577,6 +11700,29 @@
+               <description>STOP bits</description>
+               <bitOffset>12</bitOffset>
+               <bitWidth>2</bitWidth>
++              <enumeratedValues>
++                <name>STOP_BITS</name>
++                <enumeratedValue>
++                  <name>Bit1</name>
++                  <description>1 stop bit</description>
++                  <value>0</value>
++                </enumeratedValue>
++                <enumeratedValue>
++                  <name>Bit0_5</name>
++                  <description>0.5 stop bit</description>
++                  <value>1</value>
++                </enumeratedValue>
++                <enumeratedValue>
++                  <name>Bit2</name>
++                  <description>2 stop bits</description>
++                  <value>2</value>
++                </enumeratedValue>
++                <enumeratedValue>
++                  <name>Bit1_5</name>
++                  <description>1.5 stop bits</description>
++                  <value>3</value>
++                </enumeratedValue>
++              </enumeratedValues>
+             </field>
+             <field>
+               <name>CLKEN</name>
+@@ -9642,6 +11788,24 @@
+               <description>Wakeup from Stop mode interrupt flag selection</description>
+               <bitOffset>20</bitOffset>
+               <bitWidth>2</bitWidth>
++              <enumeratedValues>
++                <name>WAKEUP_FROM_STOP</name>
++                <enumeratedValue>
++                  <name>AddressMatch</name>
++                  <description>WUF active on address match (as defined by ADD[7:0] and ADDM7)</description>
++                  <value>0</value>
++                </enumeratedValue>
++                <enumeratedValue>
++                  <name>StartBit</name>
++                  <description>WuF active on Start bit detection</description>
++                  <value>2</value>
++                </enumeratedValue>
++                <enumeratedValue>
++                  <name>RXNE</name>
++                  <description>WUF active on RXNE.</description>
++                  <value>3</value>
++                </enumeratedValue>
++              </enumeratedValues>
+             </field>
+             <field>
+               <name>SCARCNT</name>
+@@ -10425,6 +12589,29 @@
+               <description>FIFO reception level</description>
+               <bitOffset>9</bitOffset>
+               <bitWidth>2</bitWidth>
++              <enumeratedValues>
++                <name>FIFO_LEVEL</name>
++                <enumeratedValue>
++                  <name>Empty</name>
++                  <description>FIFO empty</description>
++                  <value>0</value>
++                </enumeratedValue>
++                <enumeratedValue>
++                  <name>Quarter</name>
++                  <description>1/4 FIFO</description>
++                  <value>1</value>
++                </enumeratedValue>
++                <enumeratedValue>
++                  <name>Half</name>
++                  <description>1/2 FIFO</description>
++                  <value>2</value>
++                </enumeratedValue>
++                <enumeratedValue>
++                  <name>Full</name>
++                  <description>FIFO full</description>
++                  <value>3</value>
++                </enumeratedValue>
++              </enumeratedValues>
+               <access>read-only</access>
+             </field>
+             <field>
+@@ -10432,6 +12619,8 @@
+               <description>FIFO transmission level</description>
+               <bitOffset>11</bitOffset>
+               <bitWidth>2</bitWidth>
++              <enumeratedValues derivedFrom="FIFO_LEVEL">
++              </enumeratedValues>
+               <access>read-only</access>
+             </field>
+           </fields>
+@@ -10530,6 +12719,29 @@
+               <description>I2S configuration mode</description>
+               <bitOffset>8</bitOffset>
+               <bitWidth>2</bitWidth>
++              <enumeratedValues>
++                <name>I2S_MODE</name>
++                <enumeratedValue>
++                  <name>SlaveTx</name>
++                  <description>Slave - transmit</description>
++                  <value>0</value>
++                </enumeratedValue>
++                <enumeratedValue>
++                  <name>SlaveRx</name>
++                  <description>Slave - receive</description>
++                  <value>1</value>
++                </enumeratedValue>
++                <enumeratedValue>
++                  <name>MasterTx</name>
++                  <description>Master - transmit</description>
++                  <value>2</value>
++                </enumeratedValue>
++                <enumeratedValue>
++                  <name>MasterRx</name>
++                  <description>Master - receive</description>
++                  <value>3</value>
++                </enumeratedValue>
++              </enumeratedValues>
+             </field>
+             <field>
+               <name>PCMSYNC</name>
+@@ -10542,6 +12754,29 @@
+               <description>I2S standard selection</description>
+               <bitOffset>4</bitOffset>
+               <bitWidth>2</bitWidth>
++              <enumeratedValues>
++                <name>I2S_STANDARD</name>
++                <enumeratedValue>
++                  <name>Philips</name>
++                  <description>I2S Philips standard.</description>
++                  <value>0</value>
++                </enumeratedValue>
++                <enumeratedValue>
++                  <name>MSB</name>
++                  <description>MSB justified standard (left justified)</description>
++                  <value>1</value>
++                </enumeratedValue>
++                <enumeratedValue>
++                  <name>LSB</name>
++                  <description>LSB justified standard (right justified)</description>
++                  <value>2</value>
++                </enumeratedValue>
++                <enumeratedValue>
++                  <name>PCM</name>
++                  <description>PCM standard</description>
++                  <value>3</value>
++                </enumeratedValue>
++              </enumeratedValues>
+             </field>
+             <field>
+               <name>CKPOL</name>
+@@ -10554,6 +12789,24 @@
+               <description>Data length to be transferred</description>
+               <bitOffset>1</bitOffset>
+               <bitWidth>2</bitWidth>
++              <enumeratedValues>
++                <name>I2S_DATA_LENGTH</name>
++                <enumeratedValue>
++                  <name>Len16</name>
++                  <description>16-bit data length</description>
++                  <value>0</value>
++                </enumeratedValue>
++                <enumeratedValue>
++                  <name>Len24</name>
++                  <description>24-bit data length</description>
++                  <value>1</value>
++                </enumeratedValue>
++                <enumeratedValue>
++                  <name>Len32</name>
++                  <description>32-bit data length</description>
++                  <value>2</value>
++                </enumeratedValue>
++              </enumeratedValues>
+             </field>
+             <field>
+               <name>CHLEN</name>
+@@ -12620,6 +14873,49 @@
+               <description>PVD level selection</description>
+               <bitOffset>5</bitOffset>
+               <bitWidth>3</bitWidth>
++              <enumeratedValues>
++                <name>PLS_LEVEL</name>
++                <enumeratedValue>
++                  <name>LEVEL_22V</name>
++                  <description>2.2V</description>
++                  <value>0</value>
++                </enumeratedValue>
++                <enumeratedValue>
++                  <name>LEVEL_23V</name>
++                  <description>2.3V</description>
++                  <value>1</value>
++                </enumeratedValue>
++                <enumeratedValue>
++                  <name>LEVEL_24V</name>
++                  <description>2.4V</description>
++                  <value>2</value>
++                </enumeratedValue>
++                <enumeratedValue>
++                  <name>LEVEL_25V</name>
++                  <description>2.5V</description>
++                  <value>3</value>
++                </enumeratedValue>
++                <enumeratedValue>
++                  <name>LEVEL_26V</name>
++                  <description>2.6V</description>
++                  <value>4</value>
++                </enumeratedValue>
++                <enumeratedValue>
++                  <name>LEVEL_27V</name>
++                  <description>2.7V</description>
++                  <value>5</value>
++                </enumeratedValue>
++                <enumeratedValue>
++                  <name>LEVEL_28V</name>
++                  <description>2.8V</description>
++                  <value>6</value>
++                </enumeratedValue>
++                <enumeratedValue>
++                  <name>LEVEL_29V</name>
++                  <description>2.9V</description>
++                  <value>7</value>
++                </enumeratedValue>
++              </enumeratedValues>
+             </field>
+             <field>
+               <name>DBP</name>
